@@ -1,14 +1,16 @@
 #!/bin/bash
 ###########################################################################
-# Repositorio: LakkaBios 2024
+# Repositorio: Lakka 6 2024
 # Por: Raspberry Pi Buenos Aires ("https://sites.google.com/view/raspberrypibuenosaires/)
 # License: http://creativecommons.org/licenses/by-sa/4.0/
 ###########################################################################
-RUTA=https://github.com/PIBSAS/LakkaBios/raw/main/System/
+RUTA="https://github.com/PIBSAS/Lakka6/raw/main/System/"
 cd
 mkdir /storage/system/dc/
 mkdir /storage/system/pcsx2/
 mkdir /storage/system/pcsx2/bios/
+mkdir /storage/system/ep128emu/
+mkdir /storage/system/ep128emu/roms/
 rm "/storage/system/3do_arcade_saot.bin"
 rm "/storage/system/goldstar.bin"
 rm "/storage/system/panafz10.bin"
@@ -87,17 +89,17 @@ rm "/storage/system/MSXDOS2.ROM"
 rm "/storage/system/MSX.ROM"
 rm "/storage/system/PAINTER.ROM"
 rm "/storage/system/RS232.ROM"
-rm "/storage/system/2608_bd.wav"
-rm "/storage/system/2608_hh.wav"
-rm "/storage/system/2608_rim.wav"
-rm "/storage/system/2608_sd.wav"
-rm "/storage/system/2608_tom.wav"
-rm "/storage/system/2608_top.wav"
-rm "/storage/system/bios.rom"
-rm "/storage/system/font.bmp"
-rm "/storage/system/font.rom"
-rm "/storage/system/itf.rom"
-rm "/storage/system/sound.rom"
+rm "/storage/system/np2kai/2608_bd.wav"
+rm "/storage/system/np2kai/2608_hh.wav"
+rm "/storage/system/np2kai/2608_rim.wav"
+rm "/storage/system/np2kai/2608_sd.wav"
+rm "/storage/system/np2kai/2608_tom.wav"
+rm "/storage/system/np2kai/2608_top.wav"
+rm "/storage/system/np2kai/bios.rom"
+rm "/storage/system/np2kai/font.bmp"
+rm "/storage/system/np2kai/font.rom"
+rm "/storage/system/np2kai/itf.rom"
+rm "/storage/system/np2kai/sound.rom"
 rm "/storage/system/gecard.pce"
 rm "/storage/system/gexpress.pce"
 rm "/storage/system/syscard1.pce"
@@ -130,6 +132,11 @@ rm "/storage/system/64DD_IPL.bin"
 rm "/storage/system/bios7.bin"
 rm "/storage/system/bios9.bin"
 rm "/storage/system/firmware.bin"
+rm "/storage/system/dsi_firmware.bin"
+rm "/storage/system/dsi_bios7.bin"
+rm "/storage/system/dsi_bios9.bin"
+rm "/storage/system/dsi_nand.bin"
+rm "/storage/system/dsi_sd_card.bin"
 rm "/storage/system/NstDatabase.xml"
 rm "/storage/system/bios.min"
 rm "/storage/system/BS-X.bin"
@@ -366,8 +373,679 @@ rm "/storage/system/tvc22_sys.rom"
 rm "/storage/system/tvc_dos12d.rom"
 rm "/storage/system/tvcfileio.rom"
 rm "/storage/system/ecwolf.pk3"
+rm "/storage/system/aes.zip"
+rm "/storage/system/neogeo.zip"
+rm "/storage/system/ep128emu/roms/exos21.rom"
+rm "/storage/system/ep128emu/roms/basic21.rom"
+rm "/storage/system/ep128emu/roms/exdos13.rom"
+rm "/storage/system/ep128emu/roms/exos20.rom"
+rm "/storage/system/ep128emu/roms/basic20.rom"
+rm "/storage/system/ep128emu/roms/epfileio.rom"
+rm "/storage/system/ep128emu/roms/exos24uk.rom"
+rm "/storage/system/ep128emu/roms/hun.rom"
+rm "/storage/system/ep128emu/roms/epd19hft.rom"
+rm "/storage/system/ep128emu/roms/zt19hfnt.rom"
+rm "/storage/system/ep128emu/roms/brd.rom"
+rm "/storage/system/ep128emu/roms/zt19uk.rom"
+rm "/storage/system/ep128emu/roms/tvc22_sys.rom"
+rm "/storage/system/ep128emu/roms/tvc22_ext.rom"
+rm "/storage/system/ep128emu/roms/tvcfileio.rom"
+rm "/storage/system/ep128emu/roms/tvc_dos12d.rom"
+rm "/storage/system/ep128emu/roms/cpc464.rom"
+rm "/storage/system/ep128emu/roms/cpc664.rom"
+rm "/storage/system/ep128emu/roms/cpc6128.rom"
+rm "/storage/system/ep128emu/roms/cpc_amsdos.rom"
+rm "/storage/system/ep128emu/roms/zx128.rom"
+rm "/storage/system/quasi88/n88.rom"
+rm "/storage/system/quasi88/n88_0.rom"
+rm "/storage/system/quasi88/n88_1.rom"
+rm "/storage/system/quasi88/n88_2.rom"
+rm "/storage/system/quasi88/n88_3.rom"
+rm "/storage/system/quasi88/n88n.rom"
+rm "/storage/system/quasi88/disk.rom"
+rm "/storage/system/quasi88/n88knj1.rom"
+rm "/storage/system/quasi88/n88knj2.rom"
+rm "/storage/system/quasi88/n88jisho.rom"
+rm "/storage/system/palmos40-en-m500.rom"
+rm "/storage/system/palmos41-en-m515.rom"
+rm "/storage/system/palmos52-en-t3.rom"
+rm "/storage/system/palmos60-en-t3.rom"
+rm "/storage/system/bootloader-dbvz.rom"
 
-echo "The 3DO Company"
+echo "2048"
+echo "Amstrad - CPC (CrocoDS)"
+echo "Amstrad - CPC/GX4000 (Caprice32)"
+echo "Arcade (Daphne)"
+echo "Arcade (FinalBurn Neo)"
+echo "(Neo Geo BIOS)"
+wget -c "${RUTA}Arcade/neogeo.zip" -P /storage/system/fbneo/
+echo "fbneo/neocdz.zip (Neo Geo CDZ System BIOS)"
+echo "fbneo/decocass.zip (DECO Cassette System BIOS)"
+wget -c "${RUTA}Arcade/decocass.zip" -P /storage/system/fbneo/
+echo "fbneo/isgsm.zip (ISG Selection Master Type 2006 System BIOS)"
+wget -c "${RUTA}Arcade/isgsm.zip" -P /storage/system/fbneo/
+echo "fbneo/midssio.zip (Midway SSIO Sound Board Internal ROM)"
+wget -c "${RUTA}Arcade/midssio.zip" -P /storage/system/fbneo/
+echo "fbneo/nmk004.zip (NMK004 Internal ROM)"
+wget -c "${RUTA}Arcade/nmk004.zip" -P /storage/system/fbneo/
+echo "fbneo/pgm.zip (PGM System BIOS)"
+wget -c "${RUTA}Arcade/pgm.zip" -P /storage/system/fbneo/
+echo "fbneo/skns.zip (Super Kaneko Nova System BIOS)"
+wget -c "${RUTA}Arcade/skns.zip" -P /storage/system/fbneo/
+echo "fbneo/ym2608.zip (YM2608 Internal ROM)"
+wget -c "${RUTA}Arcade/ym2608.zip" -P /storage/system/fbneo/
+echo "fbneo/cchip.zip (C-Chip Internal ROM)"
+wget -c "${RUTA}Arcade/cchip.zip" -P /storage/system/fbneo/
+echo "fbneo/bubsys.zip (Bubble System BIOS)"
+wget -c "${RUTA}Arcade/bubsys.zip" -P /storage/system/fbneo/
+echo "fbneo/namcoc69.zip (Namco C69 BIOS)"
+echo "fbneo/namcoc70.zip (Namco C70 BIOS)"
+echo "fbneo/namcoc75.zip (Namco C75 BIOS)"
+echo "fbneo/coleco.zip (ColecoVision System BIOS)"
+echo "fbneo/fdsbios.zip (FDS System BIOS)"
+echo "fbneo/msx.zip (MSX1 System BIOS)"
+echo "fbneo/ngp.zip (NeoGeo Pocket BIOS)"
+echo "fbneo/spectrum.zip (ZX Spectrum BIOS)"
+echo "fbneo/spec128.zip (ZX Spectrum 128 BIOS)"
+echo "fbneo/spec1282a.zip (ZX Spectrum 128 +2a BIOS)"
+echo "fbneo/channelf.zip (Fairchild Channel F BIOS)"
+echo
+echo "Arcade (MAME 2003-Plus)"
+echo "Arcade (MAME 2010)"
+echo "Arcade (MAME 2015)"
+echo "Arcade (MAME)"
+echo "Atari - 2600(Stella 2014)"
+echo "Atari - 2600(Stella)"
+echo "Atari - 5200 (a5200)"
+wget -c "${RUTA}Atari%20-%205200/5200.rom" -P /storage/system/
+echo
+echo "Atari - 5200 (Atari800)"
+echo "5200.rom (Atari 5200 BIOS)"
+echo "(Atari BASIC)"
+wget -c "${RUTA}Atari%20-%20400-800/ATARIBAS.ROM" -P /storage/system/
+echo "(Atari 400/800 OS A)"
+wget -c "${RUTA}Atari%20-%20400-800/ATARIOSA.ROM" -P /storage/system/
+echo "(Atari 400/800 OS B)"
+wget -c "${RUTA}Atari%20-%20400-800/ATARIOSB.ROM" -P /storage/system/
+echo "(Atari XL/XE OS)"
+wget -c "${RUTA}Atari%20-%20400-800/ATARIXL.ROM" -P /storage/system/
+echo
+echo "Atari - 7800 (ProSystem)"
+echo "(7800 BIOS)"
+wget -c "${RUTA}Atari%20-%207800/7800%20BIOS%20(U).rom" -P /storage/system/
+#wget -c "${RUTA}Atari%20-%207800/7800%20BIOS%20(E).rom" -P /storage/system/
+echo
+echo "Atari - Jaguar (Viirtual Jaguar)"
+
+echo "Atari - Lynx (Beetle Lynx)"
+echo "(Lynx Boot Image)"
+wget -c "${RUTA}Atari%20-%20Lynx/lynxboot.img" -P /storage/system/
+echo
+echo "Atari - Lynx (Handy)"
+echo "(Lynx Boot Image)"
+echo
+echo "Atari - ST/STE/TT/Falcon (Hatari)"
+echo "(TOS 1.02 US aka Mega TOS)"
+wget -c "${RUTA}Atari%20-%20ST/tos.img" -P /storage/system/
+echo
+echo "Bandai - WonderSwan/Color (Beetle Cygne)"
+echo "Cannonball"
+echo "Cave Story (NXEngine)"
+echo "NXEngine requires data ROM 'Cave Story (en).zip'."
+echo "Load Content 'Doukutsu.exe on the OS by default"
+echo
+echo "ChaiLove"
+echo "CHIP-8/S-CHIP/XO-CHIP (JAXE)"
+echo "Commodore - Amiga (PUAE 2021)"
+echo "kick33180.A500 | amiga-os-120.rom (A500-A2000 KS v1.2 rev 33.180)"
+echo "kick34005.A500 | amiga-os-130.rom (A500-A2000-CDTV KS v1.3 rev 34.005)"
+wget -c "${RUTA}Commodore%20-%20Amiga/kick34005.A500" -P /storage/system/
+echo "kick37175.A500 | amiga-os-204.rom (A500+ KS v2.04 rev 37.175)"
+echo "kick37350.A600 | amiga-os-205-a600.rom (A600 KS v2.05 rev 37.350)"
+echo "kick40063.A600 | amiga-os-310-a600.rom (A600-A2000 KS v3.1 rev 40.063)"
+wget -c "${RUTA}Commodore%20-%20Amiga/kick40063.A600" -P /storage/system/
+echo "kick39106.A1200 | amiga-os-300-a1200.rom (A1200 KS v3.0 rev 39.106)"
+echo "kick40068.A1200 | amiga-os-310-a1200.rom (A1200 KS v3.1 rev 40.068)"
+wget -c "${RUTA}Commodore%20-%20Amiga/kick40068.A1200" -P /storage/system/
+echo "kick39106.A4000 | amiga-os-300-a4000.rom (A4000 KS v3.0 rev 39.106)"
+echo "kick40068.A4000 | amiga-os-310-a4000.rom (A4000 KS v3.1 rev 40.068)"
+echo "kick34005.CDTV | amiga-os-130-cdtv-ext.rom (CDTV extended ROM v1.0)"
+echo "kick40060.CD32 | amiga-os-310-cd32.rom (CD32 KS v3.1 rev 40.060)"
+echo "kick40060.CD32.ext | amiga-os-310-cd32-ext.rom (CD32 extended ROM rev 40.060)"
+echo 
+echo "Commodore - Amiga (PUAE)"
+echo "kick33180.A500 | amiga-os-120.rom (A500-A2000 KS v1.2 rev 33.180)"
+echo "kick34005.A500 | amiga-os-130.rom (A500-A2000-CDTV KS v1.3 rev 34.005)"
+echo "kick37175.A500 | amiga-os-204.rom (A500+ KS v2.04 rev 37.175)"
+echo "kick37350.A600 | amiga-os-205-a600.rom (A600 KS v2.05 rev 37.350)"
+echo "kick40063.A600 | amiga-os-310-a600.rom (A600-A2000 KS v3.1 rev 40.063)"
+echo "kick39106.A1200 | amiga-os-300-a1200.rom (A1200 KS v3.0 rev 39.106)"
+echo "kick40068.A1200 | amiga-os-310-a1200.rom (A1200 KS v3.1 rev 40.068)"
+echo "kick39106.A4000 | amiga-os-300-a4000.rom (A4000 KS v3.0 rev 39.106)"
+echo "kick40068.A4000 | amiga-os-310-a4000.rom (A4000 KS v3.1 rev 40.068)"
+echo "kick34005.CDTV | amiga-os-130-cdtv-ext.rom (CDTV extended ROM v1.0)"
+echo "kick40060.CD32 | amiga-os-310-cd32.rom (CD32 KS v3.1 rev 40.060)"
+echo "kick40060.CD32.ext | amiga-os-310-cd32-ext.rom (CD32 extended ROM rev 40.060)"
+echo
+echo "Commodore - Amiga (UAE4ARM)"
+echo "kick34005.A500 (Amiga 500 BIOS, Kickstart v1.3 Rev. 34.005)"
+echo "kick40063.A600 (Amiga 600 BIOS, Kickstart v3.1 Rev. 40.063)"
+echo "kick40068.A1200 (Amiga 1200 BIOS, Kickstart v3.1 Rev. 40.068)"
+echo "kick34005.CDTV (Amiga CDTV extended ROM v1.00 Rev. 34.005)"
+echo "kick40060.CD32 (Amiga CD32 BIOS, Kickstart v3.1 Rev. 40.060)"
+echo "kick40060.CD32.ext (Amiga CD32 Extended BIOS, CD32 Extended ROM Rev. 40.060)"
+echo
+echo "Commodore - C128 (VICE x128)"
+echo "vice/JiffyDOS_C128.bin (JiffyDOS C128 Kernal)"
+echo "vice/JiffyDOS_C64.bin (JiffyDOS C64 Kernal)"
+echo "vice/JiffyDOS_1541-II.bin (JiffyDOS 1541 drive BIOS)"
+echo "vice/JiffyDOS_1571_repl310654.bin (JiffyDOS 1571 drive BIOS)"
+echo "vice/JiffyDOS_1581.bin (JiffyDOS 1581 drive BIOS)"
+echo
+echo "Commodore - C64 (VICE x64, fast)"
+echo
+echo "Commodore - PET (VICE xpet)"
+echo
+echo "Commodore - PLUS/4 (VICE xplus4)"
+echo
+echo "Commodore - VIC-20 (VICE xvic)"
+echo
+echo "Dinothawr"
+echo "Doom (PrBoom)"
+echo "DOS (DOSBox)"
+echo "DOS (DOSBox-core)"
+echo "DOS (DOSBox-Pure)"
+echo "DOS (DOSBox-SVN)"
+echo
+echo "Enterprise - 64/128 (ep128emu)"
+echo "exos21.rom (Enterprise 128 Expandible OS 2.1)"
+wget -c "${RUTA}Enterprise%20-%2064-128/exos21.rom" -P /storage/system/ep128emu/roms/
+echo "basic21.rom (Enterprise 128 BASIC Interpreter v2.1)"
+wget -c "${RUTA}Enterprise%20-%2064-128/basic21.rom" -P /storage/system/ep128emu/roms/
+echo "exdos13.rom (Enterprise 128 Disk Controller v1.3)"
+wget -c "${RUTA}Enterprise%20-%2064-128/exdos13.rom" -P /storage/system/ep128emu/roms/
+echo "exos20.rom (Enterprise 64 Expandible OS 2.0)"
+wget -c "${RUTA}Enterprise%20-%2064-128/exos20.rom" -P /storage/system/ep128emu/roms/
+echo "basic20.rom (Enterprise 64 BASIC Interpreter v2.0)"
+wget -c "${RUTA}Enterprise%20-%2064-128/basic20.rom" -P /storage/system/ep128emu/roms/
+echo "epfileio.rom (Enterprise 128 Direct File I/O)"
+wget -c "${RUTA}Enterprise%20-%2064-128/epfileio.rom" -P /storage/system/ep128emu/roms/
+echo "exos24uk.rom (Enterprise 128 Expandible OS 2.4)"
+wget -c "${RUTA}Enterprise%20-%2064-128/exos24uk.rom" -P /storage/system/ep128emu/roms/
+echo "hun.rom (Enterprise 128 Hungarian language extension)"
+wget -c "${RUTA}Enterprise%20-%2064-128/hun.rom" -P /storage/system/ep128emu/roms/
+echo "epd19hft.rom (Enterprise 128 EP-DOS with Hungarian language extension)"
+wget -c "${RUTA}Enterprise%20-%2064-128/epd19hft.rom" -P /storage/system/ep128emu/roms/
+echo "zt19hfnt.rom (Enterprise 128 ZozoTools with Hungarian language extension 1.9)"
+#wget -c "${RUTA}Enterprise%20-%2064-128/zt18hfnt.rom" -P /storage/system/ep128emu/roms/
+echo "brd.rom (Enterprise 128 German language extension)"
+wget -c "${RUTA}Enterprise%20-%2064-128/brd.rom" -P /storage/system/ep128emu/roms/
+echo "zt19uk.rom (Enterprise 128 ZozoTools extension)"
+wget -c "${RUTA}Enterprise%20-%2064-128/zt19uk.rom" -P /storage/system/ep128emu/roms/
+echo "tvc22_sys.rom (Videoton TVC system BIOS)"
+echo "tvc22_ext.rom (Videoton TVC extension BIOS)"
+echo "tvcfileio.rom (Videoton TVC Direct File I/O)"
+echo "tvc_dos12d.rom (Videoton TVC disk BIOS)"
+echo "cpc464.rom (Amstrad CPC 464 BIOS)"
+wget -c "${RUTA}Amstrad%20-%20CPC/cpc464.rom" -P /storage/system/ep128emu/roms/
+echo "cpc664.rom (Amstrad CPC 664 BIOS)"
+wget -c "${RUTA}Amstrad%20-%20CPC/cpc664.rom" -P /storage/system/ep128emu/roms/
+echo "cpc6128.rom (Amstrad CPC 6128 BIOS)"
+wget -c "${RUTA}Amstrad%20-%20CPC/cpc6128.rom" -P /storage/system/ep128emu/roms/
+echo "cpc_amsdos.rom (Amstrad CPC AMSDOS BIOS)"
+wget -c "${RUTA}Amstrad%20-%20CPC/cpc_amsdos.rom" -P /storage/system/ep128emu/roms/
+echo "zx128.rom (ZX Spectrum 128 BIOS)"
+echo "zx48.rom (ZX Spectrum 48 BIOS)"
+echo
+echo "Fairchild ChannelF (FreeChaF)"
+echo "A lightweight Fairchild ChannelF / Video Entertainment System designed for libretro. This core was written specifically for use with low-power devices, such as Raspberry Pi, and supports loading a 'no cart' ROM to play the built-in games, controller swapping and dual-analog controls. The core requires the sl31253 and sl31254 BIOS images but the sl90025 BIOS will supersede the sl31253 version if found."
+wget -c "${RUTA}Fairchild%20Channel%20F/sl31253.bin" -P /storage/system/
+wget -c "${RUTA}Fairchild%20Channel%20F/sl31254.bin" -P /storage/system/
+wget -c "${RUTA}Fairchild%20Channel%20F/sl90025.bin" -P /storage/system/
+echo
+echo "Flashback (REminiscence)"
+echo "Game Music Emu"
+echo "GCE - Vectrex (vecx)"
+echo "Handheld Elctronic (GW)"
+echo "Infocom Z-Machine (MojoZork)"
+echo "Play Infocom games up to version 3"
+echo "Jump 'n Bump"
+echo "Laserdisc arcade game (DirkSimple)"
+echo "LowRes NX"
+echo "Lua Engine (Lutro)"
+echo "Magnavox - Odyssey2/Phillips Videopac+ (O2EM)"
+echo "Magnavox-Odyssey2"
+echo "o2rom.bin (Odyssey2 BIOS - G7000 model)"
+wget -c "${RUTA}Magnavox%20-%20Odyssey2/o2rom.bin" -P /storage/system/
+echo "c52.bin (Videopac French BIOS - G7000 model)"
+wget -c "${RUTA}Phillips%20-%20Videopac+/c52.bin" -P /storage/system/
+echo "g7400.bin (Videopac+ European BIOS - G7400 model)"
+wget -c "${RUTA}Phillips%20-%20Videopac+/g7400.bin" -P /storage/system/
+echo "jopac.bin (Videopac+ French BIOS - G7400 model)"
+wget -c "${RUTA}Phillips%20-%20Videopac+/jopac.bin" -P /storage/system/
+echo
+echo "Mattel - Intellivision (FreeIntv)"
+wget -c "${RUTA}Mattel%20-%20Intellivision/exec.bin" -P /storage/system/
+wget -c "${RUTA}Mattel%20-%20Intellivision/grom.bin" -P /storage/system/
+echo
+echo "Mega Duck / Cougar Boy (SameDuck)"
+echo
+echo "Microsoft - MSX (fMSX)"
+echo "MSX.ROM (MSX BIOS)"
+wget -c "${RUTA}Microsoft%20-%20MSX/MSX.ROM" -P /storage/system/
+echo "MSX2.ROM (MSX2 BIOS)"
+wget -c "${RUTA}Microsoft%20-%20MSX/MSX2.ROM" -P /storage/system/
+echo "MSX2EXT.ROM (MSX2 ExtROM)"
+wget -c "${RUTA}Microsoft%20-%20MSX/MSX2EXT.ROM" -P /storage/system/
+echo "MSX2P.ROM (MSX2+ BIOS)"
+wget -c "${RUTA}Microsoft%20-%20MSX/MSX2P.ROM" -P /storage/system/
+echo "MSX2PEXT.ROM (MSX2+ ExtROM)"
+wget -c "${RUTA}Microsoft%20-%20MSX/MSX2PEXT.ROM" -P /storage/system/
+echo "DISK.ROM (DiskROM/BDOS)"
+wget -c "${RUTA}Microsoft%20-%20MSX/DISK.ROM" -P /storage/system/
+echo "FMPAC.ROM (FMPAC BIOS)"
+wget -c "${RUTA}Microsoft%20-%20MSX/FMPAC.ROM" -P /storage/system/
+echo "MSXDOS2.ROM (MSX-DOS 2)"
+wget -c "${RUTA}Microsoft%20-%20MSX/MSXDOS2.ROM" -P /storage/system/
+echo "PAINTER.ROM (Yamaha Painter)"
+wget -c "${RUTA}Microsoft%20-%20MSX/PAINTER.ROM" -P /storage/system/
+echoo "KANJI.ROM (Kanji Font)"
+wget -c "${RUTA}Microsoft%20-%20MSX/KANJI.ROM" -P /storage/system/
+#wget -c "${RUTA}Microsoft%20-%20MSX/CARTS.SHA" -P /storage/system/
+#wget -c "${RUTA}Microsoft%20-%20MSX/CYRILLIC.FNT" -P /storage/system/
+#wget -c "${RUTA}Microsoft%20-%20MSX/FMPAC16.ROM" -P /storage/system/
+#wget -c "${RUTA}Microsoft%20-%20MSX/ITALIC.FNT" -P /storage/system/
+#wget -c "${RUTA}Microsoft%20-%20MSX/RS232.ROM" -P /storage/system/
+echo "Minecraft (Craft)"
+echo "Mr.Boom (Boomberman)"
+echo "MSX/SVI/ColecoVision/SG-1000 (blueMSX)"
+echo "'Databases' folder"
+echo "Databases/msxromdb.xml"
+echo "'Machines' folder"
+echo "Machines/Shared Roms/MSX.rom"
+echo "(!) The libretro port of blueMSX requires the BIOS files|from full standalone package inside the 'System\Machines' directory |and media database files into 'System\Databases' directory.|https://docs.libretro.com/library/bluemsx/#bios|(!) ColecoVision Gamepad Mapping is as follow:|Button 1 as Retropad A|Button 2 as Retropad B|Dial keys 1 to 8 as X, Y, R, L, R2, L2, R3, L3|Star as Select, Hash as Start|0 & 9 are on keyboard 1 & 2 for Player 1|0 & 9 are on keyboard 3 & 4 for Player 2.|(!) To play SpectraVideo cassettes type 'cload' then 'run'|or BLOAD ''CAS:'',R depending of game."
+echo
+echoo "NEC - PC Engine / CD (Beetle PCE FAST)"
+echo "syscard3.pce (PCE-CD BIOS)"
+wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard3.pce" -P /storage/system/
+echo "syscard2.pce (PCE-CD BIOS)"
+wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard2.pce" -P /storage/system/
+echo "syscard1.pce (PCE-CD BIOS)"
+wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard1.pce" -P /storage/system/
+echo "gexpress.pce (PCE-CD BIOS)"
+wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/gexpress.pce" -P /storage/system/
+#wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/gecard.pce" -P /storage/system/
+#wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard2u.pce" -P /storage/system/
+#wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard3u.pce" -P /storage/system/
+echo
+echo "NEC - PC Engine/SuperGrafx/CD (Beetle PCE)"
+echo "syscard3.pce (Super CD-ROM2 System V3.xx)"
+echo "syscard2.pce (CD-ROM System V2.xx)"
+echo "syscard1.pce (CD-ROM System V1.xx)"
+echo "gexpress.pce (Game Express CD Card)"
+echo
+echo "NEC - PC Engine SuperGrafx (Beetle SuperGrafx)"
+echo "syscard3.pce (Super CD-ROM2 System V3.xx)"
+echo "syscard2.pce (CD-ROM System V2.xx)"
+echo "syscard1.pce (CD-ROM System V1.xx)"
+echo "gexpress.pce (Game Express CD Card)"
+echo
+echo "NEC - PC-8000 / PC-8800 series (QUASI88)"
+echo "n88.rom (Main BIOS)"
+echo "n88_0.rom (Extension BIOS 1)"
+echo "n88_1.rom (Extension BIOS 2)"
+echo "n88_2.rom (Extension BIOS 3)"
+echo "n88_3.rom (Extension BIOS 4)"
+echo "n88n.rom (N Basic BIOS)"
+echo "disk.rom (Sub BIOS)"
+echo "n88knj1.rom (Kanji Font 1)"
+echo "n88knj2.rom (Kanji Font 2)"
+echo "n88jisho.rom (Jisho)"
+echo
+echo "NEC - PC-98 (Neko Project II Kai)"
+echo
+echo "np2kai/font.bmp (needed to display text)"
+wget -c "${RUTA}NEC%20-%20PC-98/font.bmp" -P /storage/system/np2kai/
+echo "np2kai/FONT.ROM (alt font file)"
+wget -c "${RUTA}NEC%20-%20PC-98/font.rom" -P /storage/system/np2kai/
+echo "np2kai/bios.rom"
+wget -c "${RUTA}NEC%20-%20PC-98/bios.rom" -P /storage/system/np2kai/
+echo "np2kai/itf.rom"
+wget -c "${RUTA}NEC%20-%20PC-98/itf.rom" -P /storage/system/np2kai/
+echo "np2kai/sound.rom"
+wget -c "${RUTA}NEC%20-%20PC-98/sound.rom" -P /storage/system/np2kai/
+echo "np2kai/2608_BD.WAV (YM2608 rhythm sample)"
+wget -c "${RUTA}NEC%20-%20PC-98/2608_bd.wav" -P /storage/system/np2kai/
+echo "np2kai/2608_SD.WAV (YM2608 rhythm sample)"
+wget -c "${RUTA}NEC%20-%20PC-98/2608_sd.wav" -P /storage/system/np2kai/
+echo "np2kai/2608_TOP.WAV (YM2608 rhythm sample)"
+wget -c "${RUTA}NEC%20-%20PC-98/2608_top.wav" -P /storage/system/np2kai/
+echo "np2kai/2608_HH.WAV (YM2608 rhythm sample)"
+wget -c "${RUTA}NEC%20-%20PC-98/2608_hh.wav" -P /storage/system/np2kai/
+echo "np2kai/2608_TOM.WAV (YM2608 rhythm sample)"
+wget -c "${RUTA}NEC%20-%20PC-98/2608_tom.wav" -P /storage/system/np2kai/
+echo "np2kai/2608_RIM.WAV (YM2608 rhythm sample)"
+wget -c "${RUTA}NEC%20-%20PC-98/2608_rim.wav" -P /storage/system/np2kai/
+echo
+echo "JOY2KEY buttons mapping: A=x B=z X=space Y=lctrl|L=backspace R=rshift SELECT=escape START=return|Keep 'end' key down when booting for machine options.|Many games need GDC set as 2.5Mhz there."
+echo 
+echo "NEC - PC-98 (Neko Project II)"
+echo "NEC - PC-FX (Beetle PC-FX)"
+echo
+echo "pcfx.rom (PC-FX BIOS v1.00 - 2 Sep 1994)"
+wget -c "${RUTA}NEC%20-%20PC-FX/pcfx.rom" -P /storage/system/
+#wget -c "${RUTA}NEC%20-%20PC-FX/fx-scsi.rom" -P /storage/system/
+#wget -c "${RUTA}NEC%20-%20PC-FX/pcfxbios.bin" -P /storage/system/
+#wget -c "${RUTA}NEC%20-%20PC-FX/pcfxga.rom" -P /storage/system/
+#wget -c "${RUTA}NEC%20-%20PC-FX/pcfxv101.bin" -P /storage/system/
+echo
+echo "Nintendo - DS (DeSmuME 2015)"
+echo "firmware.bin (NDS Firmware)"
+wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/firmware.bin" -P /storage/system/
+echo "bios7.bin (ARM7 BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/bios7.bin" -P /storage/system/
+echo "bios9.bin (ARM9 BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/bios9.bin" -P /storage/system/
+echo
+echo "Nintendo - DS (DeSmuME)"
+echo "firmware.bin (NDS Firmware)"
+echo "bios7.bin (ARM7 BIOS)"
+echo "bios9.bin (ARM9 BIOS)"
+echo
+echo "Nintendo - DS (melonDS)"
+echo
+echo "firmware.bin (NDS Firmware)"
+echo "bios7.bin (ARM7 BIOS)"
+echo "bios9.bin (ARM9 BIOS)"
+echo "dsi_firmware.bin (DSi Firmware)"
+echo "dsi_bios7.bin (DSi ARM7 BIOS)"
+echo "dsi_bios9.bin (DSi ARM9 BIOS)"
+echo "dsi_nand.bin (DSi NAND)"
+echo "dsi_sd_card.bin (DSi SD card)"
+echo
+echo "Nintendo - Gameboy / Color (Gambatte)"
+echo "gb_bios.bin (Game Boy BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Gameboy/gb_bios.bin" -P /storage/system/
+echo "gbc_bios.bin (Game Boy Color BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Gameboy%20Color/gbc_bios.bin" -P /storage/system/
+echo 
+echo "Nintendo - Game Boy / Color (Gearboy)"
+echo
+echo "Nintendo - Game Boy / Color (SameBoy)"
+echo
+echo "dmg_boot.bin (Game Boy boot ROM)"
+wget -c "${RUTA}Nintendo%20-%20Gameboy/dmg_boot.bin" -P /storage/system/
+echo "cgb_boot.bin (Game Boy Color boot ROM)"
+wget -c "${RUTA}Nintendo%20-%20Gameboy%20Color/cgb_boot.bin" -P /storage/system/
+echo
+echo "Nintendo - Game Boy / Color (TGB Dual)"
+echo "Nintendo - Game Boy Advance (gpSP)"
+echo
+echo "gba_bios.bin (Game Boy Advance BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Game%20Boy%20Advance/gba_bios.bin" -P /storage/system/
+echo
+echo "Nintendo - Game Boy Advance (mGBA)"
+echo "gba_bios.bin (Game Boy Advance BIOS)"
+echo "gb_bios.bin (Game Boy BIOS)"
+echo "gbc_bios.bin (Game Boy Color BIOS)"
+echo "sgb_bios.bin (Super Game Boy BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb_bios.bin" -P /storage/system/
+echo 
+echo "Nintendo - Game Boy Advance (mGBA-fork)"
+echo "gba_bios.bin (Game Boy Advance BIOS)"
+echo "gb_bios.bin (Game Boy BIOS)"
+echo "gbc_bios.bin (Game Boy Color BIOS)"
+echo "sgb_bios.bin (Super Game Boy BIOS)"
+echo
+echo "Nintendo - Game Boy Advance (VBA-M)"
+echo
+echo "gba_bios.bin (Game Boy Advance BIOS)"
+echo "gb_bios.bin (Game Boy BIOS)"
+echo "gbc_bios.bin (Game Boy Color BIOS)"
+echo
+echo "Nintendo - GameCube / Wii (Dolphin)"
+echo "Dolphin 'Sys' folder"
+echo "dolphin-emu/Sys/codehandler.bin"
+echo "ALREADY ON THE OS By default"
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20010608.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20010831.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20020402.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20020823.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-ntsc-10.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-ntsc-11.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-ntsc-12.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-pal-10.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-pal-11.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20GameCube/gc-pal-12.bin" -P /storage/system/
+echo
+echo "Nintendo - NES / Famicom (bnes)"
+echo "Nintendo - NES / Famicom (FCEUmm)"
+echo
+echo "disksys.rom (Family Computer Disk System BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Famicom%20Disk%20System/disksys.rom" -P /storage/system/
+echo "nes.pal (custom NES Palette)"
+echo "gamegenies.nes (Game Genie add-on cartridge)"
+echo
+echo "Nintendo - NES / Famicom (Mesen)"
+echo "disksys.rom (Family Computer Disk System BIOS)"
+echo
+echo "Nintendo - NES / Famicom (Nestopia UE)"
+echo "disksys.rom (Family Computer Disk System BIOS)"
+echo
+echo "Nintendo - NES / Famicom (QuickNES)"
+echo
+echo "Nintendo - Nintendo 64 (Mupen64Plus-Next)"
+echo
+echo "Nintendo - Nintendo 64 (ParaLLEI N64)"
+echo "64DD_IPL.bin (64DD IPL ROM)"
+wget -c "${RUTA}Nintendo%20-%20Nintendo%2064DD/64DD_IPL.bin" -P /storage/system/
+echo
+echo "Nintendo - Pokemon Mini (PokeMini)"
+echo "bios.min (Pokemon Mini BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Pokemon%20Mini/bios.min" -P /storage/system/
+echo
+echo "Nintendo - SNES / Famicom (higan Accuracy)"
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1.program.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1b.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1b.program.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp2.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp2.program.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp3.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp3.program.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp4.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp4.program.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/cx4.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st010.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st010.program.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st011.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st011.program.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st018.data.rom" -P /storage/system/
+wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st018.program.rom" -P /storage/system/
+echo "SGB1.sfc/sgb1.boot.rom (SGB Boot BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb1.boot.rom" -P /storage/system/
+echo "SGB1.sfc/program.rom (SGB Boot Image)"
+wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb1.program.rom" -P /storage/system/
+echo "SGB2.sfc/sgb2.boot.rom (SGB Boot BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb2.boot.rom" -P /storage/system/
+echo "SGB2.sfc/program.rom (SGB Boot Image)"
+wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb2.program.rom" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb2_bios.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb_bios.bin" -P /storage/system/
+echo
+echo "Nintendo - SNES / Famicom (nSide Balanced)"
+echo "dsp1.data.rom"
+echo "dsp1.program.rom"
+echo "dsp1b.data.rom"
+echo "dsp1b.program.rom"
+echo "dsp2.data.rom"
+echo "dsp2.program.rom"
+echo "dsp3.data.rom"
+echo "dsp3.program.rom"
+echo "dsp4.data.rom"
+echo "dsp4.program.rom"
+echo "cx4.data.rom"
+echo "st010.data.rom"
+echo "st010.program.rom"
+echo "st011.data.rom"
+echo "st011.program.rom"
+echo "st018.data.rom"
+echo "st018.program.rom"
+echo "SGB1.sfc/sgb1.boot.rom (SGB Boot BIOS)"
+echo "SGB1.sfc/program.rom (SGB Boot Image)"
+echo "SGB2.sfc/sgb2.boot.rom (SGB Boot BIOS)"
+echo "SGB2.sfc/program.rom (SGB Boot Image)"
+echo
+echo "Nintendo - SNES / SFC (Beetle Supafaust)"
+echo "Nintendo - SNES / SFC (bsnes 2014 Performance)"
+echo "dsp1.data.rom"
+echo "dsp1.program.rom"
+echo "dsp1b.data.rom"
+echo "dsp1b.program.rom"
+echo "dsp2.data.rom"
+echo "dsp2.program.rom"
+echo "dsp3.data.rom"
+echo "dsp3.program.rom"
+echo "dsp4.data.rom"
+echo "dsp4.program.rom"
+echo "st010.data.rom"
+echo "st010.program.rom"
+echo "st011.data.rom"
+echo "st011.program.rom"
+echo "st018.data.rom"
+echo "st018.program.rom"
+echo "BUSCAR!!!!!!!!!!!!!!!!!!!"
+echo "sgb.boot.rom (SGB Boot BIOS)"
+echo
+echo "Nintendo - SNES / SFC (bsnes)"
+echo "dsp1.data.rom"
+echo "dsp1.program.rom"
+echo "dsp1b.data.rom"
+echo "dsp1b.program.rom"
+echo "dsp2.data.rom"
+echo "dsp2.program.rom"
+echo "dsp3.data.rom"
+echo "dsp3.program.rom"
+echo "dsp4.data.rom"
+echo "dsp4.program.rom"
+echo "cx4.data.rom"
+echo "st010.data.rom"
+echo "st010.program.rom"
+echo "st011.data.rom"
+echo "st011.program.rom"
+echo "st018.data.rom"
+echo "st018.program.rom"
+echo "SGB1.sfc (SGB Boot BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/SGB1.sfc" -P /storage/system/
+echo "SGB2.sfc (SGB Boot BIOS)"
+wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/SGB2.sfc" -P /storage/system/
+echo "BS-X.bin (BS-X - Sore wa Namae o Nusumareta Machi no Monogatari (japan)(Rev 1))"
+wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X.bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X%20(En).bin" -P /storage/system/
+#wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X%20(En)%20(DRM-Free).bin" -P /storage/system/
+echo
+echo "Nintendo - SNES / SFC (bsnes-hd beta)"
+echo
+echo "dsp1.data.rom"
+echo "dsp1.program.rom"
+echo "dsp1b.data.rom"
+echo "dsp1b.program.rom"
+echo "dsp2.data.rom"
+echo "dsp2.program.rom"
+echo "dsp3.data.rom"
+echo "dsp3.program.rom"
+echo "dsp4.data.rom"
+echo "dsp4.program.rom"
+echo "cx4.data.rom"
+echo "st010.data.rom"
+echo "st010.program.rom"
+echo "st011.data.rom"
+echo "st011.program.rom"
+echo "st018.data.rom"
+echo "st018.program.rom"
+echo "SGB1.sfc (SGB Boot BIOS)"
+echo "SGB2.sfc (SGB Boot BIOS)"
+echo
+echo "Nintendo - SNES / SFC (Snes9x 2002)"
+echo "Nintendo - SNES / SFC (Snes9x 2005 Plus)"
+echo "Nintendo - SNES / SFC (Snes9x 2005)"
+echo "Nintendo - SNES / SFC (Snes9x 2010)"
+echo "Nintendo - SNES / SFC (Snes9x)"
+echo
+echo "BS-X.bin (BS-X - Sore wa Namae o Nusumareta Machi no Monogatari (japan)(Rev 1))"
+echo "STBIOS.bin (Sufami Turbo (Japan))"
+wget -c "${RUTA}Nintendo%20-%20SuFami%20Turbo/STBIOS.bin" -P /storage/system/
+echo
+echo "Nintendo - SNES / SFC / Game Boy / Color (Mesen-S)"
+echo
+echo "dsp1.data.rom"
+echo "dsp1.program.rom"
+echo "dsp1b.data.rom"
+echo "dsp1b.program.rom"
+echo "dsp2.data.rom"
+echo "dsp2.program.rom"
+echo "dsp3.data.rom"
+echo "dsp3.program.rom"
+echo "dsp4.data.rom"
+echo "dsp4.program.rom"
+echo "st010.data.rom"
+echo "st010.program.rom"
+echo "st011.data.rom"
+echo "st011.program.rom"
+echo "dmg_boot.bin (Game Boy boot ROM)"
+echo "cgb_boot.bin (Game Boy Color boot ROM)"
+echo "sgb_boot.bin (SGB Boot Image)"
+echo "sgb2.boot.bin (SGB2 Boot Image)"
+echo "SGB1.sfc (SGB ROM)"
+echo "SGB2.sfc (SGB2 ROM)"
+echo "BS-X.bin (Satellaview Boot ROM)"
+echo
+echo "Nintendo - Virtual Boy (Beetle VB)"
+echo
+echo "Palm OS (Mu)"
+echo "palmos40-en-m500.rom (Palm OS 4.0)"
+
+echo "palmos41-en-m515.rom (Palm OS 4.1)"
+
+echo "palmos52-en-t3.rom (Palm OS 5.2.1)"
+
+echo "palmos60-en-t3.rom (Palm OS 6.0)"
+
+echo "bootloader-dbvz.rom (MC68VZ328 UART Bootloader)"
+
+
+echo "Phillips - CDi (SAME CDi)"
+echo "PICO-8 (Fake-08)"
+echo "PICO-8 (Retro8)"
+echo "PocketCDG"
+echo "Quake (TryQuake)"
+echo "Quake II (vitaQuake 2)"
+echo "Rick Dangerous (XRick)"
+echo "RPG Maker 2000/2003 (EasyRPG)"
+echo "ScummVM"
+echo "Sega - Dreamcast/Naomi (Flycast)"
+echo "Sega - Master System (Emux SMS)"
+echo "Sega - MS/GG/MD/CD (Genesis Plus GX Wide)"
+echo "Sega - MS/GG/MD/CD (Genesis Plus GX)"
+echo "Sega - MS/GG/MD/CD/32X (PicoDrive)"
+echo "Sega - MS/GG/SG-1000 (Gearsystem)"
+echo "Sega - Saturn (Yabause)"
+echo "Sharp - X68000 (PX68k)"
+echo "Sharp X1 (X Milennium)"
+echo "Sinclair - ZX 81 (EightyOne)"
+echo "Sinclair - ZX Spectrum (Fuse)"
+echo "SNK - Neo Geo AES/MVS (Geolith)"
+echo "SNK - Neo Geo CD(NeoCD)"
+echo "SNK - Neo Geo Pocket / Color (Beetle NeoPop)"
+echo "SNK - Neo Geo Pocket / Color (RACE)"
+echo "Sony - PlayStation (Beetle PSX HW)"
+echo "Sony - PlayStation (PCSX ReARMed)"
+echo "Sony - PlayStation (SwanStation)"
+echo "Sony - PlayStation 2 (Play!)"
+echo "Sony - PlayStation Portable (PPSSPP)"
+echo "Supper Bros War"
+echo "Texas Instruments TI-83 (Numero)"
+echo "The 3DO Company -3DO (Opera)"
 wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/3do_arcade_saot.bin" -P /storage/system/
 wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/goldstar.bin" -P /storage/system/
 wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10.bin" -P /storage/system/
@@ -381,216 +1059,33 @@ wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1j-kanji.bin" -P /storage
 wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1j-norsa.bin" -P /storage/system/
 wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1-kanji.bin" -P /storage/system/
 wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/sanyotry.bin" -P /storage/system/
+echo
+echo "The Powder Toy"
+echo "Thomson - MO/TO (Theodore)"
+echo "TIC-80"
+echo "Tomb Raider (OpenLara)"
+echo "Uzebox (Uzem)"
+echo "Vircon32"
+echo "WASM-4"
+echo "Watara - Supervision (Potator)"
+echo "Wolfenstein 3D (ECWolf)"
+wget -c "${RUTA}Wolfenstein%203D/ecwolf.pk3" -P /storage/system/
 
-echo "Amstrad-CPC"
-wget -c "${RUTA}Amstrad%20-%20CPC/cpc464.rom" -P /storage/system/
-wget -c "${RUTA}Amstrad%20-%20CPC/cpc6128.rom" -P /storage/system/
-wget -c "${RUTA}Amstrad%20-%20CPC/cpc664.rom" -P /storage/system/
-wget -c "${RUTA}Amstrad%20-%20CPC/cpc_amsdos.rom" -P /storage/system/
 
-echo "Arcade"
-wget -c "${RUTA}Arcade/bubsys.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/cchip.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/decocass.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/isgsm.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/midssio.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/neogeo.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/nmk004.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/pgm.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/skns.zip" -P /storage/system/
-wget -c "${RUTA}Arcade/ym2608.zip" -P /storage/system/
-
-echo "Atari-400-800"
-wget -c "${RUTA}Atari%20-%20400-800/ATARIBAS.ROM" -P /storage/system/
-wget -c "${RUTA}Atari%20-%20400-800/ATARIOSA.ROM" -P /storage/system/
-wget -c "${RUTA}Atari%20-%20400-800/ATARIOSB.ROM" -P /storage/system/
-wget -c "${RUTA}Atari%20-%20400-800/ATARIXL.ROM" -P /storage/system/
-
-echo "Atari-5200"
-wget -c "${RUTA}Atari%20-%205200/5200.rom" -P /storage/system/
-
-echo "Atari-7800"
-wget -c "${RUTA}Atari%20-%207800/7800%20BIOS%20(E).rom" -P /storage/system/
-wget -c "${RUTA}Atari%20-%207800/7800%20BIOS%20(U).rom" -P /storage/system/
-
-echo "Atari-Lynx"
-wget -c "${RUTA}Atari%20-%20Lynx/lynxboot.img" -P /storage/system/
-
-echo "Atari-ST"
-wget -c "${RUTA}Atari%20-%20ST/tos.img" -P /storage/system/
 
 echo "Coleco-ColecoVision"
 wget -c "${RUTA}Coleco%20-%20ColecoVision/colecovision.rom" -P /storage/system/
-
-echo "Commodore-Amiga"
-wget -c "${RUTA}Commodore%20-%20Amiga/kick34005.A500" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick40063.A600" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick40068.A1200" -P /storage/system/
-
-echo "Enterprise-64-128"
-wget -c "${RUTA}Enterprise%20-%2064-128/basic20.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/basic21.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/brd.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/epd19hft.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/epfileio.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/exdos13.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/exos20.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/exos21.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/exos24uk.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/hun.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/zt18hfnt.rom" -P /storage/system/
-wget -c "${RUTA}Enterprise%20-%2064-128/zt19uk.rom" -P /storage/system/
-
-echo "Fairchild Channel F"
-wget -c "${RUTA}Fairchild%20Channel%20F/sl31253.bin" -P /storage/system/
-wget -c "${RUTA}Fairchild%20Channel%20F/sl31254.bin" -P /storage/system/
-wget -c "${RUTA}Fairchild%20Channel%20F/sl90025.bin" -P /storage/system/
-
 echo "Id Software-Doom"
 wget -c "${RUTA}Id%20Software%20-%20Doom/prboom.wad" -P /storage/system/
-
 echo "J2ME"
 wget -c "${RUTA}J2ME/freej2me.jar" -P /storage/system/
 wget -c "${RUTA}J2ME/freej2me-lr.jar" -P /storage/system/
 wget -c "${RUTA}J2ME/freej2me-sdl.jar" -P /storage/system/
-
 echo "MacII"
 wget -c "${RUTA}MacII/MacII.ROM" -P /storage/system/
-
-echo "Magnavox-Odyssey2"
-wget -c "${RUTA}Magnavox%20-%20Odyssey2/o2rom.bin" -P /storage/system/
-
-echo "Mattel-Intellivision"
-wget -c "${RUTA}Mattel%20-%20Intellivision/exec.bin" -P /storage/system/
-wget -c "${RUTA}Mattel%20-%20Intellivision/grom.bin" -P /storage/system/
-
-echo "Microsoft-MSX"
-wget -c "${RUTA}Microsoft%20-%20MSX/CARTS.SHA" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/CYRILLIC.FNT" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/DISK.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/FMPAC16.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/FMPAC.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/ITALIC.FNT" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/KANJI.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/MSX2EXT.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/MSX2PEXT.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/MSX2P.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/MSX2.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/MSXDOS2.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/MSX.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/PAINTER.ROM" -P /storage/system/
-wget -c "${RUTA}Microsoft%20-%20MSX/RS232.ROM" -P /storage/system/
-
-echo "NEC-PC-98"
-wget -c "${RUTA}NEC%20-%20PC-98/2608_bd.wav" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/2608_hh.wav" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/2608_rim.wav" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/2608_sd.wav" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/2608_tom.wav" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/2608_top.wav" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/bios.rom" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/font.bmp" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/font.rom" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/itf.rom" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-98/sound.rom" -P /storage/system/
-
-echo "NEC-PC Engine-TurboGrafx 16-SuperGrafx"
-wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/gecard.pce" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/gexpress.pce" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard1.pce" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard2.pce" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard2u.pce" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard3.pce" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard3u.pce" -P /storage/system/
-
-echo "NEC-PC-FX"
-wget -c "${RUTA}NEC%20-%20PC-FX/fx-scsi.rom" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-FX/pcfxbios.bin" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-FX/pcfxga.rom" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-FX/pcfx.rom" -P /storage/system/
-wget -c "${RUTA}NEC%20-%20PC-FX/pcfxv101.bin" -P /storage/system/
-
-echo "Nintendo-Famicom Disk System"
-wget -c "${RUTA}Nintendo%20-%20Famicom%20Disk%20System/disksys.rom" -P /storage/system/
-
-echo "Nintendo-Gameboy"
-wget -c "${RUTA}Nintendo%20-%20Gameboy/dmg_boot.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Gameboy/gb_bios.bin" -P /storage/system/
-
-echo "Nintendo-Game Boy Advance"
-wget -c "${RUTA}Nintendo%20-%20Game%20Boy%20Advance/gba_bios.bin" -P /storage/system/
-
-echo "Nintendo-Gameboy Color"
-wget -c "${RUTA}Nintendo%20-%20Gameboy%20Color/cgb_boot.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Gameboy%20Color/gbc_bios.bin" -P /storage/system/
-
-echo "Nintendo-GameCube"
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20010608.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20010831.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20020402.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20020823.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-ntsc-10.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-ntsc-11.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-ntsc-12.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-pal-10.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-pal-11.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20GameCube/gc-pal-12.bin" -P /storage/system/
-
-echo "Nintendo-Nintendo 64DD"
-wget -c "${RUTA}Nintendo%20-%20Nintendo%2064DD/64DD_IPL.bin" -P /storage/system/
-
-echo "Nintendo-Nintendo DS"
-wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/bios7.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/bios9.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/firmware.bin" -P /storage/system/
-
 echo "Nintendo-Nintendo Entertainment System"
 wget -c "${RUTA}Nintendo%20-%20Nintendo%20Entertainment%20System/NstDatabase.xml" -P /storage/system/
 
-echo "Nintendo-Pokemon Mini"
-wget -c "${RUTA}Nintendo%20-%20Pokemon%20Mini/bios.min" -P /storage/system/
-
-echo "Nintendo-Satellaview"
-wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X%20(En).bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X%20(En)%20(DRM-Free).bin" -P /storage/system/
-
-echo "Nintendo-SuFami Turbo"
-wget -c "${RUTA}Nintendo%20-%20SuFami%20Turbo/STBIOS.bin" -P /storage/system/
-
-echo "Nintendo-Super Game Boy"
-wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb1.boot.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb1.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/SGB1.sfc" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb2_bios.bin" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb2.boot.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb2.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/SGB2.sfc" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb_bios.bin" -P /storage/system/
-
-echo "Nintendo-Super Nintendo Entertainment System"
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/cx4.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1b.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1b.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp2.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp2.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp3.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp3.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp4.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp4.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st010.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st010.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st011.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st011.program.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st018.data.rom" -P /storage/system/
-wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/st018.program.rom" -P /storage/system/
-
-echo "Phillips-Videopac+"
-wget -c "${RUTA}Phillips%20-%20Videopac+/c52.bin" -P /storage/system/
-wget -c "${RUTA}Phillips%20-%20Videopac+/g7400.bin" -P /storage/system/
-wget -c "${RUTA}Phillips%20-%20Videopac+/jopac.bin" -P /storage/system/
 
 echo "ScummVM"
 wget -c "${RUTA}ScummVM/scummvm.zip" -P /storage/system/
@@ -825,6 +1320,4 @@ wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_sys.rom" -P /storage/system/
 wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc_dos12d.rom" -P /storage/system/
 wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvcfileio.rom" -P /storage/system/
 
-echo "Wolfenstein 3D"
-wget -c "${RUTA}Wolfenstein%203D/ecwolf.pk3" -P /storage/system/
 echo "That's all!"
