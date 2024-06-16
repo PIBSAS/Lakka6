@@ -1,4 +1,4 @@
-<h1 align="center">Lakka Bios</h1>
+<h1 align="center">Lakka 6 Bios</h1>
 
 <p align="center">
   <img alt="Lakka.png" src="https://github.com/PIBSAS/LakkaBios/blob/main/Lakka.png?raw=true">
@@ -26,12 +26,12 @@ Password root
 
 ## For 32 bits
 ```
-curl -sSL https://raw.githubusercontent.com/PIBSAS/LakkaBios/main/lakka | bash
+curl -sSL https://raw.githubusercontent.com/PIBSAS/Lakka6/main/lakka | bash
 ```
 ## For 64 bits:
 
 ```
-curl -sSL https://raw.githubusercontent.com/PIBSAS/LakkaBios/main/lakka64.sh | bash
+curl -sSL https://raw.githubusercontent.com/PIBSAS/Lakka6/main/lakka64.sh | bash
 ```
 
 
