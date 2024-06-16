@@ -26,7 +26,7 @@ Password root
 
 ## For 32 bits
 ```
-curl -sSL https://raw.githubusercontent.com/PIBSAS/Lakka6/main/lakka | bash
+curl -sSL https://raw.githubusercontent.com/PIBSAS/Lakka6/main/lakka.sh | bash
 ```
 ## For 64 bits:
 
