@@ -4,7 +4,7 @@
 # Por: Raspberry Pi Buenos Aires ("https://sites.google.com/view/raspberrypibuenosaires/)
 # License: http://creativecommons.org/licenses/by-sa/4.0/
 ###########################################################################
-RUTA="https://github.com/PIBSAS/Lakka6/raw/main/System/"
+RUTA="https://github.com/PIBSAS/Lakka6/tree/main/System/"
 cd
 mkdir /storage/system/dc/
 mkdir /storage/system/pcsx2/
