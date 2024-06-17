@@ -13,6 +13,13 @@ mkdir /storage/system/pcsx2/bios/
 mkdir /storage/system/ep128emu/
 mkdir /storage/system/ep128emu/roms/
 mkdir /storage/system/same_cdi/
+mkdir /storage/system/fbneo/
+mkdir /storage/system/np2kai/
+mkdir /storage/system/keropi/
+mkdir /storage/system/xmil/
+mkdir /storage/system/fuse/
+mkdir /storage/system/neocd/
+echo
 rm "/storage/system/3do_arcade_saot.bin"
 rm "/storage/system/goldstar.bin"
 rm "/storage/system/panafz10.bin"
@@ -1319,10 +1326,15 @@ echo "Palm OS (Mu)"
 echo "========================================================================"
 echo
 echo "palmos40-en-m500.rom (Palm OS 4.0)"
+wget -c "${RUTA}palmos40-en-m500.rom" -P /storage/system/
 echo "palmos41-en-m515.rom (Palm OS 4.1)"
+wget -c "${RUTA}palmos41-en-m515.rom" -P /storage/system/
 echo "palmos52-en-t3.rom (Palm OS 5.2.1)"
+wget -c "${RUTA}palmos52-en-t3.rom" -P /storage/system/
 echo "palmos60-en-t3.rom (Palm OS 6.0)"
+wget -c "${RUTA}palmos60-en-t3.rom" -P /storage/system/
 echo "bootloader-dbvz.rom (MC68VZ328 UART Bootloader)"
+wget -c "${RUTA}bootloader-dbvz.rom" -P /storage/system/
 echo
 echo "========================================================================"
 echo "Phillips - CDi (SAME CDi)"
