@@ -11,6 +11,7 @@ mkdir /storage/system/pcsx2/
 mkdir /storage/system/pcsx2/bios/
 mkdir /storage/system/ep128emu/
 mkdir /storage/system/ep128emu/roms/
+mkdir /storage/system/same_cdi/
 rm "/storage/system/3do_arcade_saot.bin"
 rm "/storage/system/goldstar.bin"
 rm "/storage/system/panafz10.bin"
@@ -216,18 +217,18 @@ rm "/storage/system/iplrom.dat"
 rm "/storage/system/iplromxv.dat"
 rm "/storage/system/128-0.rom"
 rm "/storage/system/128-1.rom"
-rm "/storage/system/128p-0.rom"
-rm "/storage/system/128p-1.rom"
+rm "/storage/system/fuse/128p-0.rom"
+rm "/storage/system/fuse/128p-1.rom"
 rm "/storage/system/128-spanish-0.rom"
 rm "/storage/system/128-spanish-1.rom"
-rm "/storage/system/256s-0.rom"
-rm "/storage/system/256s-1.rom"
-rm "/storage/system/256s-2.rom"
-rm "/storage/system/256s-3.rom"
+rm "/storage/system/fuse/256s-0.rom"
+rm "/storage/system/fuse/256s-1.rom"
+rm "/storage/system/fuse/256s-2.rom"
+rm "/storage/system/fuse/256s-3.rom"
 rm "/storage/system/48.rom"
 rm "/storage/system/disciple.rom"
 rm "/storage/system/disk_plus3.szx"
-rm "/storage/system/gluck.rom"
+rm "/storage/system/fuse/gluck.rom"
 rm "/storage/system/if1-1.rom"
 rm "/storage/system/if1-2.rom"
 rm "/storage/system/plus2-0.rom"
@@ -260,7 +261,7 @@ rm "/storage/system/tape_ts2068.szx"
 rm "/storage/system/tc2048.rom"
 rm "/storage/system/tc2068-0.rom"
 rm "/storage/system/tc2068-1.rom"
-rm "/storage/system/trdos.rom"
+rm "/storage/system/fuse/trdos.rom"
 rm "/storage/system/zx128.rom"
 rm "/storage/system/zx48.rom"
 rm "/storage/system/000-lo.lo"
@@ -368,10 +369,10 @@ rm "/storage/system/pcsx2/bios/ps2-0230j-20080220.bin"
 rm "/storage/system/pcsx2/bios/ps2-0250e-20100415.bin"
 rm "/storage/system/pcsx2/bios/ps2-0250j-20100415.bin"
 rm "/storage/system/ppge_atlas.zim"
-rm "/storage/system/tvc22_ext.rom"
-rm "/storage/system/tvc22_sys.rom"
-rm "/storage/system/tvc_dos12d.rom"
-rm "/storage/system/tvcfileio.rom"
+#rm "/storage/system/tvc22_ext.rom"
+#rm "/storage/system/tvc22_sys.rom"
+#rm "/storage/system/tvc_dos12d.rom"
+#rm "/storage/system/tvcfileio.rom"
 rm "/storage/system/ecwolf.pk3"
 rm "/storage/system/aes.zip"
 rm "/storage/system/neogeo.zip"
@@ -411,12 +412,49 @@ rm "/storage/system/palmos41-en-m515.rom"
 rm "/storage/system/palmos52-en-t3.rom"
 rm "/storage/system/palmos60-en-t3.rom"
 rm "/storage/system/bootloader-dbvz.rom"
-
+rm "/storage/system/same_cdi/bios/cdimono1.zip"
+rm "/storage/system/same_cdi/bios/cdimono2.zip"
+rm "/storage/system/same_cdi/bios/cdibios.zip"
+rm "/storage/system/keropi/iplrom.dat"
+rm "/storage/system/keropi/cgrom.dat"
+rm "/storage/system/keropi/iplrom30.dat"
+rm "/storage/system/xmil/IPLROM.X1"
+rm "/storage/system/xmil/IPLROM.X1T"
+rm "/storage/system/ti83se.rom"
+rm "/storage/system/ti83plus.rom"
+rm "/storage/system/ti83.rom"
+rm "/storage/system/Vircon32Bios.v32"
+rm "/storage/system/MT32_CONTROL.ROM"
+rm "/storage/system/MT32_PCM.ROM"
+rm "/storage/system/CM32L_CONTROL.ROM"
+rm "/storage/system/CM32L_PCM.ROM"
+rm "/storage/system/libbass.so"
+rm "/storage/system/libbassmidi.so"
+rm "/storage/system/bass.dll"
+rm "/storage/system/bassmidi.dll"
+rm "/storage/system/libbass.dylib"
+rm "/storage/system/libbassmidi.dylib"
+echo
+echo "========================================================================"
 echo "2048"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Amstrad - CPC (CrocoDS)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Amstrad - CPC/GX4000 (Caprice32)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Arcade (Daphne)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Arcade (FinalBurn Neo)"
+echo "========================================================================"
+echo
 echo "(Neo Geo BIOS)"
 wget -c "${RUTA}Arcade/neogeo.zip" -P /storage/system/fbneo/
 echo "fbneo/neocdz.zip (Neo Geo CDZ System BIOS)"
@@ -450,13 +488,34 @@ echo "fbneo/spec128.zip (ZX Spectrum 128 BIOS)"
 echo "fbneo/spec1282a.zip (ZX Spectrum 128 +2a BIOS)"
 echo "fbneo/channelf.zip (Fairchild Channel F BIOS)"
 echo
+echo "========================================================================"
 echo "Arcade (MAME 2003-Plus)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Arcade (MAME 2010)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Arcade (MAME 2015)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Arcade (MAME)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Atari - 2600(Stella 2014)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Atari - 2600(Stella)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Atari - 5200 (a5200)"
+echo "========================================================================"
+echo
 wget -c "${RUTA}Atari%20-%205200/5200.rom" -P /storage/system/
 echo
 echo "Atari - 5200 (Atari800)"
@@ -470,33 +529,62 @@ wget -c "${RUTA}Atari%20-%20400-800/ATARIOSB.ROM" -P /storage/system/
 echo "(Atari XL/XE OS)"
 wget -c "${RUTA}Atari%20-%20400-800/ATARIXL.ROM" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Atari - 7800 (ProSystem)"
+echo "========================================================================"
+echo
 echo "(7800 BIOS)"
 wget -c "${RUTA}Atari%20-%207800/7800%20BIOS%20(U).rom" -P /storage/system/
 #wget -c "${RUTA}Atari%20-%207800/7800%20BIOS%20(E).rom" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Atari - Jaguar (Viirtual Jaguar)"
-
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Atari - Lynx (Beetle Lynx)"
+echo "========================================================================"
+echo
 echo "(Lynx Boot Image)"
 wget -c "${RUTA}Atari%20-%20Lynx/lynxboot.img" -P /storage/system/
 echo
 echo "Atari - Lynx (Handy)"
 echo "(Lynx Boot Image)"
 echo
+echo "========================================================================"
 echo "Atari - ST/STE/TT/Falcon (Hatari)"
+echo "========================================================================"
+echo
 echo "(TOS 1.02 US aka Mega TOS)"
 wget -c "${RUTA}Atari%20-%20ST/tos.img" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Bandai - WonderSwan/Color (Beetle Cygne)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Cannonball"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Cave Story (NXEngine)"
+echo "========================================================================"
+echo
 echo "NXEngine requires data ROM 'Cave Story (en).zip'."
 echo "Load Content 'Doukutsu.exe on the OS by default"
 echo
+echo "========================================================================"
 echo "ChaiLove"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "CHIP-8/S-CHIP/XO-CHIP (JAXE)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Commodore - Amiga (PUAE 2021)"
+echo "========================================================================"
+echo
 echo "kick33180.A500 | amiga-os-120.rom (A500-A2000 KS v1.2 rev 33.180)"
 echo "kick34005.A500 | amiga-os-130.rom (A500-A2000-CDTV KS v1.3 rev 34.005)"
 wget -c "${RUTA}Commodore%20-%20Amiga/kick34005.A500" -P /storage/system/
@@ -513,7 +601,10 @@ echo "kick34005.CDTV | amiga-os-130-cdtv-ext.rom (CDTV extended ROM v1.0)"
 echo "kick40060.CD32 | amiga-os-310-cd32.rom (CD32 KS v3.1 rev 40.060)"
 echo "kick40060.CD32.ext | amiga-os-310-cd32-ext.rom (CD32 extended ROM rev 40.060)"
 echo 
+echo "========================================================================"
 echo "Commodore - Amiga (PUAE)"
+echo "========================================================================"
+echo
 echo "kick33180.A500 | amiga-os-120.rom (A500-A2000 KS v1.2 rev 33.180)"
 echo "kick34005.A500 | amiga-os-130.rom (A500-A2000-CDTV KS v1.3 rev 34.005)"
 echo "kick37175.A500 | amiga-os-204.rom (A500+ KS v2.04 rev 37.175)"
@@ -527,7 +618,10 @@ echo "kick34005.CDTV | amiga-os-130-cdtv-ext.rom (CDTV extended ROM v1.0)"
 echo "kick40060.CD32 | amiga-os-310-cd32.rom (CD32 KS v3.1 rev 40.060)"
 echo "kick40060.CD32.ext | amiga-os-310-cd32-ext.rom (CD32 extended ROM rev 40.060)"
 echo
+echo "========================================================================"
 echo "Commodore - Amiga (UAE4ARM)"
+echo "========================================================================"
+echo
 echo "kick34005.A500 (Amiga 500 BIOS, Kickstart v1.3 Rev. 34.005)"
 echo "kick40063.A600 (Amiga 600 BIOS, Kickstart v3.1 Rev. 40.063)"
 echo "kick40068.A1200 (Amiga 1200 BIOS, Kickstart v3.1 Rev. 40.068)"
@@ -535,29 +629,73 @@ echo "kick34005.CDTV (Amiga CDTV extended ROM v1.00 Rev. 34.005)"
 echo "kick40060.CD32 (Amiga CD32 BIOS, Kickstart v3.1 Rev. 40.060)"
 echo "kick40060.CD32.ext (Amiga CD32 Extended BIOS, CD32 Extended ROM Rev. 40.060)"
 echo
+echo "========================================================================"
 echo "Commodore - C128 (VICE x128)"
+echo "========================================================================"
+echo
 echo "vice/JiffyDOS_C128.bin (JiffyDOS C128 Kernal)"
 echo "vice/JiffyDOS_C64.bin (JiffyDOS C64 Kernal)"
 echo "vice/JiffyDOS_1541-II.bin (JiffyDOS 1541 drive BIOS)"
 echo "vice/JiffyDOS_1571_repl310654.bin (JiffyDOS 1571 drive BIOS)"
 echo "vice/JiffyDOS_1581.bin (JiffyDOS 1581 drive BIOS)"
 echo
+echo "========================================================================"
 echo "Commodore - C64 (VICE x64, fast)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Commodore - PET (VICE xpet)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Commodore - PLUS/4 (VICE xplus4)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Commodore - VIC-20 (VICE xvic)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Dinothawr"
-echo "Doom (PrBoom)"
-echo "DOS (DOSBox)"
-echo "DOS (DOSBox-core)"
-echo "DOS (DOSBox-Pure)"
-echo "DOS (DOSBox-SVN)"
+echo "========================================================================"
 echo
+echo "========================================================================"
+echo "Doom (PrBoom)"
+echo "========================================================================"
+echo
+wget -c "${RUTA}Id%20Software%20-%20Doom/prboom.wad" -P /storage/system/
+echo
+echo "========================================================================"
+echo "DOS (DOSBox)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "DOS (DOSBox-core)"
+echo "========================================================================"
+echo
+echo "MT32_CONTROL.ROM (MT-32 Control ROM v1.07)"
+echo "MT32_PCM.ROM (MT-32 PCM ROM)"
+echo "CM32L_CONTROL.ROM (CM-32L/LAPC-I Control ROM v1.02)"
+echo "CM32L_PCM.ROM (CM-32L/CM-64/LAPC-I PCM ROM)"
+echo "libbass.so (BASS Linux library)"
+echo "libbassmidi.so (BASSMIDI Linux library)"
+echo "bass.dll (BASS Windows library)"
+echo "bassmidi.dll (BASSMIDI Windows library)"
+echo "libbass.dylib (BASS macOS library)"
+echo "libbassmidi.dylib (BASSMIDI macOS library)"
+echo
+echo "========================================================================"
+echo "DOS (DOSBox-Pure)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "DOS (DOSBox-SVN)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Enterprise - 64/128 (ep128emu)"
+echo "========================================================================"
+echo
 echo "exos21.rom (Enterprise 128 Expandible OS 2.1)"
 wget -c "${RUTA}Enterprise%20-%2064-128/exos21.rom" -P /storage/system/ep128emu/roms/
 echo "basic21.rom (Enterprise 128 BASIC Interpreter v2.1)"
@@ -583,9 +721,13 @@ wget -c "${RUTA}Enterprise%20-%2064-128/brd.rom" -P /storage/system/ep128emu/rom
 echo "zt19uk.rom (Enterprise 128 ZozoTools extension)"
 wget -c "${RUTA}Enterprise%20-%2064-128/zt19uk.rom" -P /storage/system/ep128emu/roms/
 echo "tvc22_sys.rom (Videoton TVC system BIOS)"
+wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_sys.rom" -P /storage/system/ep128emu/roms/.
 echo "tvc22_ext.rom (Videoton TVC extension BIOS)"
+wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_ext.rom" -P /storage/system/ep128emu/roms/
 echo "tvcfileio.rom (Videoton TVC Direct File I/O)"
+wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvcfileio.rom" -P /storage/system/ep128emu/roms/
 echo "tvc_dos12d.rom (Videoton TVC disk BIOS)"
+wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc_dos12d.rom" -P /storage/system/ep128emu/roms/
 echo "cpc464.rom (Amstrad CPC 464 BIOS)"
 wget -c "${RUTA}Amstrad%20-%20CPC/cpc464.rom" -P /storage/system/ep128emu/roms/
 echo "cpc664.rom (Amstrad CPC 664 BIOS)"
@@ -595,26 +737,61 @@ wget -c "${RUTA}Amstrad%20-%20CPC/cpc6128.rom" -P /storage/system/ep128emu/roms/
 echo "cpc_amsdos.rom (Amstrad CPC AMSDOS BIOS)"
 wget -c "${RUTA}Amstrad%20-%20CPC/cpc_amsdos.rom" -P /storage/system/ep128emu/roms/
 echo "zx128.rom (ZX Spectrum 128 BIOS)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/zx128.rom" -P /storage/system/ep128emu/roms/
 echo "zx48.rom (ZX Spectrum 48 BIOS)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/zx48.rom" -P /storage/system/ep128emu/roms/
 echo
+echo "========================================================================"
 echo "Fairchild ChannelF (FreeChaF)"
+echo "========================================================================"
+echo
 echo "A lightweight Fairchild ChannelF / Video Entertainment System designed for libretro. This core was written specifically for use with low-power devices, such as Raspberry Pi, and supports loading a 'no cart' ROM to play the built-in games, controller swapping and dual-analog controls. The core requires the sl31253 and sl31254 BIOS images but the sl90025 BIOS will supersede the sl31253 version if found."
+echo
 wget -c "${RUTA}Fairchild%20Channel%20F/sl31253.bin" -P /storage/system/
 wget -c "${RUTA}Fairchild%20Channel%20F/sl31254.bin" -P /storage/system/
 wget -c "${RUTA}Fairchild%20Channel%20F/sl90025.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Flashback (REminiscence)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Game Music Emu"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "GCE - Vectrex (vecx)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Handheld Elctronic (GW)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Infocom Z-Machine (MojoZork)"
+echo "========================================================================"
 echo "Play Infocom games up to version 3"
+echo
+echo "========================================================================"
 echo "Jump 'n Bump"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Laserdisc arcade game (DirkSimple)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "LowRes NX"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Lua Engine (Lutro)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Magnavox - Odyssey2/Phillips Videopac+ (O2EM)"
-echo "Magnavox-Odyssey2"
+echo "========================================================================"
+echo
 echo "o2rom.bin (Odyssey2 BIOS - G7000 model)"
 wget -c "${RUTA}Magnavox%20-%20Odyssey2/o2rom.bin" -P /storage/system/
 echo "c52.bin (Videopac French BIOS - G7000 model)"
@@ -624,13 +801,21 @@ wget -c "${RUTA}Phillips%20-%20Videopac+/g7400.bin" -P /storage/system/
 echo "jopac.bin (Videopac+ French BIOS - G7400 model)"
 wget -c "${RUTA}Phillips%20-%20Videopac+/jopac.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Mattel - Intellivision (FreeIntv)"
+echo "========================================================================"
+echo
 wget -c "${RUTA}Mattel%20-%20Intellivision/exec.bin" -P /storage/system/
 wget -c "${RUTA}Mattel%20-%20Intellivision/grom.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Mega Duck / Cougar Boy (SameDuck)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Microsoft - MSX (fMSX)"
+echo "========================================================================"
+echo
 echo "MSX.ROM (MSX BIOS)"
 wget -c "${RUTA}Microsoft%20-%20MSX/MSX.ROM" -P /storage/system/
 echo "MSX2.ROM (MSX2 BIOS)"
@@ -656,16 +841,29 @@ wget -c "${RUTA}Microsoft%20-%20MSX/KANJI.ROM" -P /storage/system/
 #wget -c "${RUTA}Microsoft%20-%20MSX/FMPAC16.ROM" -P /storage/system/
 #wget -c "${RUTA}Microsoft%20-%20MSX/ITALIC.FNT" -P /storage/system/
 #wget -c "${RUTA}Microsoft%20-%20MSX/RS232.ROM" -P /storage/system/
+echo
+echo "========================================================================"
 echo "Minecraft (Craft)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Mr.Boom (Boomberman)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "MSX/SVI/ColecoVision/SG-1000 (blueMSX)"
+echo "========================================================================"
+echo
 echo "'Databases' folder"
 echo "Databases/msxromdb.xml"
 echo "'Machines' folder"
 echo "Machines/Shared Roms/MSX.rom"
 echo "(!) The libretro port of blueMSX requires the BIOS files|from full standalone package inside the 'System\Machines' directory |and media database files into 'System\Databases' directory.|https://docs.libretro.com/library/bluemsx/#bios|(!) ColecoVision Gamepad Mapping is as follow:|Button 1 as Retropad A|Button 2 as Retropad B|Dial keys 1 to 8 as X, Y, R, L, R2, L2, R3, L3|Star as Select, Hash as Start|0 & 9 are on keyboard 1 & 2 for Player 1|0 & 9 are on keyboard 3 & 4 for Player 2.|(!) To play SpectraVideo cassettes type 'cload' then 'run'|or BLOAD ''CAS:'',R depending of game."
 echo
+echo "========================================================================"
 echoo "NEC - PC Engine / CD (Beetle PCE FAST)"
+echo "========================================================================"
+echo
 echo "syscard3.pce (PCE-CD BIOS)"
 wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard3.pce" -P /storage/system/
 echo "syscard2.pce (PCE-CD BIOS)"
@@ -678,19 +876,28 @@ wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/gex
 #wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard2u.pce" -P /storage/system/
 #wget -c "${RUTA}NEC%20-%20PC%20Engine%20-%20TurboGrafx%2016%20-%20SuperGrafx/syscard3u.pce" -P /storage/system/
 echo
+echo "========================================================================"
 echo "NEC - PC Engine/SuperGrafx/CD (Beetle PCE)"
+echo "========================================================================"
+echo
 echo "syscard3.pce (Super CD-ROM2 System V3.xx)"
 echo "syscard2.pce (CD-ROM System V2.xx)"
 echo "syscard1.pce (CD-ROM System V1.xx)"
 echo "gexpress.pce (Game Express CD Card)"
 echo
+echo "========================================================================"
 echo "NEC - PC Engine SuperGrafx (Beetle SuperGrafx)"
+echo "========================================================================"
+echo
 echo "syscard3.pce (Super CD-ROM2 System V3.xx)"
 echo "syscard2.pce (CD-ROM System V2.xx)"
 echo "syscard1.pce (CD-ROM System V1.xx)"
 echo "gexpress.pce (Game Express CD Card)"
 echo
+echo "========================================================================"
 echo "NEC - PC-8000 / PC-8800 series (QUASI88)"
+echo "========================================================================"
+echo
 echo "n88.rom (Main BIOS)"
 echo "n88_0.rom (Extension BIOS 1)"
 echo "n88_1.rom (Extension BIOS 2)"
@@ -702,7 +909,9 @@ echo "n88knj1.rom (Kanji Font 1)"
 echo "n88knj2.rom (Kanji Font 2)"
 echo "n88jisho.rom (Jisho)"
 echo
+echo "========================================================================"
 echo "NEC - PC-98 (Neko Project II Kai)"
+echo "========================================================================"
 echo
 echo "np2kai/font.bmp (needed to display text)"
 wget -c "${RUTA}NEC%20-%20PC-98/font.bmp" -P /storage/system/np2kai/
@@ -729,8 +938,13 @@ wget -c "${RUTA}NEC%20-%20PC-98/2608_rim.wav" -P /storage/system/np2kai/
 echo
 echo "JOY2KEY buttons mapping: A=x B=z X=space Y=lctrl|L=backspace R=rshift SELECT=escape START=return|Keep 'end' key down when booting for machine options.|Many games need GDC set as 2.5Mhz there."
 echo 
+echo "========================================================================"
 echo "NEC - PC-98 (Neko Project II)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "NEC - PC-FX (Beetle PC-FX)"
+echo "========================================================================"
 echo
 echo "pcfx.rom (PC-FX BIOS v1.00 - 2 Sep 1994)"
 wget -c "${RUTA}NEC%20-%20PC-FX/pcfx.rom" -P /storage/system/
@@ -739,7 +953,10 @@ wget -c "${RUTA}NEC%20-%20PC-FX/pcfx.rom" -P /storage/system/
 #wget -c "${RUTA}NEC%20-%20PC-FX/pcfxga.rom" -P /storage/system/
 #wget -c "${RUTA}NEC%20-%20PC-FX/pcfxv101.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - DS (DeSmuME 2015)"
+echo "========================================================================"
+echo
 echo "firmware.bin (NDS Firmware)"
 wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/firmware.bin" -P /storage/system/
 echo "bios7.bin (ARM7 BIOS)"
@@ -747,12 +964,17 @@ wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/bios7.bin" -P /storage/system/
 echo "bios9.bin (ARM9 BIOS)"
 wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/bios9.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - DS (DeSmuME)"
+echo "========================================================================"
+echo
 echo "firmware.bin (NDS Firmware)"
 echo "bios7.bin (ARM7 BIOS)"
 echo "bios9.bin (ARM9 BIOS)"
 echo
+echo "========================================================================"
 echo "Nintendo - DS (melonDS)"
+echo "========================================================================"
 echo
 echo "firmware.bin (NDS Firmware)"
 echo "bios7.bin (ARM7 BIOS)"
@@ -763,47 +985,70 @@ echo "dsi_bios9.bin (DSi ARM9 BIOS)"
 echo "dsi_nand.bin (DSi NAND)"
 echo "dsi_sd_card.bin (DSi SD card)"
 echo
+echo "========================================================================"
 echo "Nintendo - Gameboy / Color (Gambatte)"
+echo "========================================================================"
+echo
 echo "gb_bios.bin (Game Boy BIOS)"
 wget -c "${RUTA}Nintendo%20-%20Gameboy/gb_bios.bin" -P /storage/system/
 echo "gbc_bios.bin (Game Boy Color BIOS)"
 wget -c "${RUTA}Nintendo%20-%20Gameboy%20Color/gbc_bios.bin" -P /storage/system/
 echo 
+echo "========================================================================"
 echo "Nintendo - Game Boy / Color (Gearboy)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Nintendo - Game Boy / Color (SameBoy)"
+echo "========================================================================"
 echo
 echo "dmg_boot.bin (Game Boy boot ROM)"
 wget -c "${RUTA}Nintendo%20-%20Gameboy/dmg_boot.bin" -P /storage/system/
 echo "cgb_boot.bin (Game Boy Color boot ROM)"
 wget -c "${RUTA}Nintendo%20-%20Gameboy%20Color/cgb_boot.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - Game Boy / Color (TGB Dual)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Nintendo - Game Boy Advance (gpSP)"
+echo "========================================================================"
 echo
 echo "gba_bios.bin (Game Boy Advance BIOS)"
 wget -c "${RUTA}Nintendo%20-%20Game%20Boy%20Advance/gba_bios.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - Game Boy Advance (mGBA)"
+echo "========================================================================"
+echo
 echo "gba_bios.bin (Game Boy Advance BIOS)"
 echo "gb_bios.bin (Game Boy BIOS)"
 echo "gbc_bios.bin (Game Boy Color BIOS)"
 echo "sgb_bios.bin (Super Game Boy BIOS)"
 wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb_bios.bin" -P /storage/system/
 echo 
+echo "========================================================================"
 echo "Nintendo - Game Boy Advance (mGBA-fork)"
+echo "========================================================================"
+echo
 echo "gba_bios.bin (Game Boy Advance BIOS)"
 echo "gb_bios.bin (Game Boy BIOS)"
 echo "gbc_bios.bin (Game Boy Color BIOS)"
 echo "sgb_bios.bin (Super Game Boy BIOS)"
 echo
+echo "========================================================================"
 echo "Nintendo - Game Boy Advance (VBA-M)"
+echo "========================================================================"
 echo
 echo "gba_bios.bin (Game Boy Advance BIOS)"
 echo "gb_bios.bin (Game Boy BIOS)"
 echo "gbc_bios.bin (Game Boy Color BIOS)"
 echo
+echo "========================================================================"
 echo "Nintendo - GameCube / Wii (Dolphin)"
+echo "========================================================================"
+echo
 echo "Dolphin 'Sys' folder"
 echo "dolphin-emu/Sys/codehandler.bin"
 echo "ALREADY ON THE OS By default"
@@ -818,33 +1063,55 @@ echo "ALREADY ON THE OS By default"
 #wget -c "${RUTA}Nintendo%20-%20GameCube/gc-pal-11.bin" -P /storage/system/
 #wget -c "${RUTA}Nintendo%20-%20GameCube/gc-pal-12.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - NES / Famicom (bnes)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Nintendo - NES / Famicom (FCEUmm)"
+echo "========================================================================"
 echo
 echo "disksys.rom (Family Computer Disk System BIOS)"
 wget -c "${RUTA}Nintendo%20-%20Famicom%20Disk%20System/disksys.rom" -P /storage/system/
 echo "nes.pal (custom NES Palette)"
 echo "gamegenies.nes (Game Genie add-on cartridge)"
 echo
+echo "========================================================================"
 echo "Nintendo - NES / Famicom (Mesen)"
+echo "========================================================================"
 echo "disksys.rom (Family Computer Disk System BIOS)"
 echo
+echo "========================================================================"
 echo "Nintendo - NES / Famicom (Nestopia UE)"
+echo "========================================================================"
 echo "disksys.rom (Family Computer Disk System BIOS)"
 echo
+echo "========================================================================"
 echo "Nintendo - NES / Famicom (QuickNES)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Nintendo - Nintendo 64 (Mupen64Plus-Next)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Nintendo - Nintendo 64 (ParaLLEI N64)"
+echo "========================================================================"
+echo
 echo "64DD_IPL.bin (64DD IPL ROM)"
 wget -c "${RUTA}Nintendo%20-%20Nintendo%2064DD/64DD_IPL.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - Pokemon Mini (PokeMini)"
+echo "========================================================================"
+echo
 echo "bios.min (Pokemon Mini BIOS)"
 wget -c "${RUTA}Nintendo%20-%20Pokemon%20Mini/bios.min" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - SNES / Famicom (higan Accuracy)"
+echo "========================================================================"
+echo
 wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1.data.rom" -P /storage/system/
 wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1.program.rom" -P /storage/system/
 wget -c "${RUTA}Nintendo%20-%20Super%20Nintendo%20Entertainment%20System/dsp1b.data.rom" -P /storage/system/
@@ -873,7 +1140,10 @@ wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb2.program.rom" -P /storage/
 #wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb2_bios.bin" -P /storage/system/
 #wget -c "${RUTA}Nintendo%20-%20Super%20Game%20Boy/sgb_bios.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - SNES / Famicom (nSide Balanced)"
+echo "========================================================================"
+echo
 echo "dsp1.data.rom"
 echo "dsp1.program.rom"
 echo "dsp1b.data.rom"
@@ -896,8 +1166,14 @@ echo "SGB1.sfc/program.rom (SGB Boot Image)"
 echo "SGB2.sfc/sgb2.boot.rom (SGB Boot BIOS)"
 echo "SGB2.sfc/program.rom (SGB Boot Image)"
 echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (Beetle Supafaust)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (bsnes 2014 Performance)"
+echo "========================================================================"
+echo
 echo "dsp1.data.rom"
 echo "dsp1.program.rom"
 echo "dsp1b.data.rom"
@@ -917,7 +1193,10 @@ echo "st018.program.rom"
 echo "BUSCAR!!!!!!!!!!!!!!!!!!!"
 echo "sgb.boot.rom (SGB Boot BIOS)"
 echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (bsnes)"
+echo "========================================================================"
+echo
 echo "dsp1.data.rom"
 echo "dsp1.program.rom"
 echo "dsp1b.data.rom"
@@ -944,7 +1223,9 @@ wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X.bin" -P /storage/system/
 #wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X%20(En).bin" -P /storage/system/
 #wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X%20(En)%20(DRM-Free).bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (bsnes-hd beta)"
+echo "========================================================================"
 echo
 echo "dsp1.data.rom"
 echo "dsp1.program.rom"
@@ -966,17 +1247,33 @@ echo "st018.program.rom"
 echo "SGB1.sfc (SGB Boot BIOS)"
 echo "SGB2.sfc (SGB Boot BIOS)"
 echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (Snes9x 2002)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (Snes9x 2005 Plus)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (Snes9x 2005)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (Snes9x 2010)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC (Snes9x)"
+echo "========================================================================"
 echo
 echo "BS-X.bin (BS-X - Sore wa Namae o Nusumareta Machi no Monogatari (japan)(Rev 1))"
 echo "STBIOS.bin (Sufami Turbo (Japan))"
 wget -c "${RUTA}Nintendo%20-%20SuFami%20Turbo/STBIOS.bin" -P /storage/system/
 echo
+echo "========================================================================"
 echo "Nintendo - SNES / SFC / Game Boy / Color (Mesen-S)"
+echo "========================================================================"
 echo
 echo "dsp1.data.rom"
 echo "dsp1.program.rom"
@@ -1000,324 +1297,531 @@ echo "SGB1.sfc (SGB ROM)"
 echo "SGB2.sfc (SGB2 ROM)"
 echo "BS-X.bin (Satellaview Boot ROM)"
 echo
+echo "========================================================================"
 echo "Nintendo - Virtual Boy (Beetle VB)"
+echo "========================================================================"
 echo
+echo "========================================================================"
 echo "Palm OS (Mu)"
-echo "palmos40-en-m500.rom (Palm OS 4.0)"
-
-echo "palmos41-en-m515.rom (Palm OS 4.1)"
-
-echo "palmos52-en-t3.rom (Palm OS 5.2.1)"
-
-echo "palmos60-en-t3.rom (Palm OS 6.0)"
-
-echo "bootloader-dbvz.rom (MC68VZ328 UART Bootloader)"
-
-
-echo "Phillips - CDi (SAME CDi)"
-echo "PICO-8 (Fake-08)"
-echo "PICO-8 (Retro8)"
-echo "PocketCDG"
-echo "Quake (TryQuake)"
-echo "Quake II (vitaQuake 2)"
-echo "Rick Dangerous (XRick)"
-echo "RPG Maker 2000/2003 (EasyRPG)"
-echo "ScummVM"
-echo "Sega - Dreamcast/Naomi (Flycast)"
-echo "Sega - Master System (Emux SMS)"
-echo "Sega - MS/GG/MD/CD (Genesis Plus GX Wide)"
-echo "Sega - MS/GG/MD/CD (Genesis Plus GX)"
-echo "Sega - MS/GG/MD/CD/32X (PicoDrive)"
-echo "Sega - MS/GG/SG-1000 (Gearsystem)"
-echo "Sega - Saturn (Yabause)"
-echo "Sharp - X68000 (PX68k)"
-echo "Sharp X1 (X Milennium)"
-echo "Sinclair - ZX 81 (EightyOne)"
-echo "Sinclair - ZX Spectrum (Fuse)"
-echo "SNK - Neo Geo AES/MVS (Geolith)"
-echo "SNK - Neo Geo CD(NeoCD)"
-echo "SNK - Neo Geo Pocket / Color (Beetle NeoPop)"
-echo "SNK - Neo Geo Pocket / Color (RACE)"
-echo "Sony - PlayStation (Beetle PSX HW)"
-echo "Sony - PlayStation (PCSX ReARMed)"
-echo "Sony - PlayStation (SwanStation)"
-echo "Sony - PlayStation 2 (Play!)"
-echo "Sony - PlayStation Portable (PPSSPP)"
-echo "Supper Bros War"
-echo "Texas Instruments TI-83 (Numero)"
-echo "The 3DO Company -3DO (Opera)"
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/3do_arcade_saot.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/goldstar.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10e-anvil.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10e-anvil-norsa.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10ja-anvil-kanji.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10-norsa.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1j.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1j-kanji.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1j-norsa.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1-kanji.bin" -P /storage/system/
-wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/sanyotry.bin" -P /storage/system/
+echo "========================================================================"
 echo
-echo "The Powder Toy"
-echo "Thomson - MO/TO (Theodore)"
-echo "TIC-80"
-echo "Tomb Raider (OpenLara)"
-echo "Uzebox (Uzem)"
-echo "Vircon32"
-echo "WASM-4"
-echo "Watara - Supervision (Potator)"
-echo "Wolfenstein 3D (ECWolf)"
-wget -c "${RUTA}Wolfenstein%203D/ecwolf.pk3" -P /storage/system/
-
-
-
-echo "Coleco-ColecoVision"
-wget -c "${RUTA}Coleco%20-%20ColecoVision/colecovision.rom" -P /storage/system/
-echo "Id Software-Doom"
-wget -c "${RUTA}Id%20Software%20-%20Doom/prboom.wad" -P /storage/system/
-echo "J2ME"
-wget -c "${RUTA}J2ME/freej2me.jar" -P /storage/system/
-wget -c "${RUTA}J2ME/freej2me-lr.jar" -P /storage/system/
-wget -c "${RUTA}J2ME/freej2me-sdl.jar" -P /storage/system/
-echo "MacII"
-wget -c "${RUTA}MacII/MacII.ROM" -P /storage/system/
-echo "Nintendo-Nintendo Entertainment System"
-wget -c "${RUTA}Nintendo%20-%20Nintendo%20Entertainment%20System/NstDatabase.xml" -P /storage/system/
-
-
+echo "palmos40-en-m500.rom (Palm OS 4.0)"
+echo "palmos41-en-m515.rom (Palm OS 4.1)"
+echo "palmos52-en-t3.rom (Palm OS 5.2.1)"
+echo "palmos60-en-t3.rom (Palm OS 6.0)"
+echo "bootloader-dbvz.rom (MC68VZ328 UART Bootloader)"
+echo
+echo "========================================================================"
+echo "Phillips - CDi (SAME CDi)"
+echo "========================================================================"
+echo
+echo "same_cdi/bios/cdimono1.zip"
+echo "same_cdi/bios/cdimono2.zip"
+echo "same_cdi/bios/cdibios.zip"
+echo
+echo "========================================================================"
+echo "PICO-8 (Fake-08)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "PICO-8 (Retro8)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "PocketCDG"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Quake (TryQuake)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Quake II (vitaQuake 2)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Rick Dangerous (XRick)"
+echo "========================================================================"
+echo
+echo "/system/data.zip by default on the OS"
+echo
+echo "========================================================================"
+echo "RPG Maker 2000/2003 (EasyRPG)"
+echo "========================================================================"
+echo
+echo "========================================================================"
 echo "ScummVM"
-wget -c "${RUTA}ScummVM/scummvm.zip" -P /storage/system/
-
-echo "Sega-Dreamcast/dc"
-wget -c "${RUTA}Sega%20-%20Dreamcast/dc/boot.bin" -P /storage/system/dc/
+echo "========================================================================"
+echo
+echo "Files already on the OS"
+#wget -c "${RUTA}ScummVM/scummvm.zip" -P /storage/system/
+echo
+echo "========================================================================"
+echo "Sega - Dreamcast/Naomi (Flycast)"
+echo "========================================================================"
+echo
+echo "dc/dc_boot.bin (Dreamcast BIOS)"
 wget -c "${RUTA}Sega%20-%20Dreamcast/dc/dc_boot.bin" -P /storage/system/dc/
-wget -c "${RUTA}Sega%20-%20Dreamcast/dc/flash.bin" -P /storage/system/dc/
-
-echo "Sega-Dreamcast-based Arcade/dc"
-wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/airlbios.zip" -P /storage/system/dc/
-wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/awbios.zip" -P /storage/system/dc/
-wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/f355bios.zip" -P /storage/system/dc/
-wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/f355dlx.zip" -P /storage/system/dc/
-wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/hod2bios.zip" -P /storage/system/dc/
-wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/naomi2.zip" -P /storage/system/dc/
+#wget -c "${RUTA}Sega%20-%20Dreamcast/dc/boot.bin" -P /storage/system/dc/
+echo "dc/naomi.zip (Naomi Bios from MAME)"
 wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/naomi.zip" -P /storage/system/dc/
-
-echo "Sega-Game Gear"
-wget -c "${RUTA}Sega%20-%20Game%20Gear/bios.gg" -P /storage/system/
-
-echo "Sega-Master System-Mark III"
-wget -c "${RUTA}Sega%20-%20Master%20System%20-%20Mark%20III/bios_E.sms" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Master%20System%20-%20Mark%20III/bios_J.sms" -P /storage/system/
+echo "dc/naomi2.zip (Naomi2 Bios from MAME)"
+wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/naomi2.zip" -P /storage/system/dc/
+echo "dc/hod2bios.zip (Naomi The House of the Dead 2 Bios from MAME)"
+wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/hod2bios.zip" -P /storage/system/dc/
+echo "dc/f355dlx.zip (Naomi Ferrari F355 Challenge deluxe Bios from MAME)"
+wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/f355dlx.zip" -P /storage/system/dc/
+echo "dc/f355bios.zip (Naomi Ferrari F355 Challenge twin/deluxe Bios from MAME)"
+wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/f355bios.zip" -P /storage/system/dc/
+echo "dc/airlbios.zip (Naomi Airline Pilots deluxe Bios from MAME)"
+wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/airlbios.zip" -P /storage/system/dc/
+echo "dc/awbios.zip (Atomiswave BIOS from MAME)"
+wget -c "${RUTA}Sega%20-%20Dreamcast-based%20Arcade/dc/awbios.zip" -P /storage/system/dc/
+#wget -c "${RUTA}Sega%20-%20Dreamcast/dc/flash.bin" -P /storage/system/dc/
+echo
+echo "========================================================================"
+echo "Sega - Master System (Emux SMS)"
+echo "========================================================================"
+echo
+echo "bios.sms(Master System BIOS)"
 wget -c "${RUTA}Sega%20-%20Master%20System%20-%20Mark%20III/bios.sms" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Master%20System%20-%20Mark%20III/bios_U.sms" -P /storage/system/
-
-echo "Sega-Mega CD-Sega CD"
-wget -c "${RUTA}Sega%20-%20Mega%20CD%20-%20Sega%20CD/bios_CD_E.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Mega%20CD%20-%20Sega%20CD/bios_CD_J.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Mega%20CD%20-%20Sega%20CD/bios_CD_U.bin" -P /storage/system/
-
-echo "Sega-Mega Drive-Genesis"
-wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/areplay.bin" -P /storage/system/
+echo
+echo "========================================================================"
+echo "Sega - MS/GG/MD/CD (Genesis Plus GX Wide)"
+echo "========================================================================"
+echo
+echo "bios_MD.bin (Mega Drive startup ROM)"
 wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/bios_MD.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/ggenie.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/rom.db" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/sk2chip.bin" -P /storage/system/
+echo "bios_CD_E.bin (MegaCD EU BIOS)"
+wget -c "${RUTA}Sega%20-%20Mega%20CD%20-%20Sega%20CD/bios_CD_E.bin" -P /storage/system/
+echo "bios_CD_U.bin (SegaCD US BIOS)"
+wget -c "${RUTA}Sega%20-%20Mega%20CD%20-%20Sega%20CD/bios_CD_U.bin" -P /storage/system/
+echo "bios_CD_J.bin (MegaCD JP BIOS)"
+wget -c "${RUTA}Sega%20-%20Mega%20CD%20-%20Sega%20CD/bios_CD_J.bin" -P /storage/system/
+echo "bios_E.sms (MasterSystem EU BIOS)"
+wget -c "${RUTA}Sega%20-%20Master%20System%20-%20Mark%20III/bios_E.sms" -P /storage/system/
+echo "bios_U.sms (MasterSystem US BIOS)"
+wget -c "${RUTA}Sega%20-%20Master%20System%20-%20Mark%20III/bios_U.sms" -P /storage/system/
+echo "bios_J.sms (MasterSystem JP BIOS)"
+wget -c "${RUTA}Sega%20-%20Master%20System%20-%20Mark%20III/bios_J.sms" -P /storage/system/
+echo "bios.gg (GameGear BIOS)"
+wget -c "${RUTA}Sega%20-%20Game%20Gear/bios.gg" -P /storage/system/
+echo "sk.bin (Sonic & Knuckles ROM)"
 wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/sk.bin" -P /storage/system/
-
-echo "Sega-Saturn"
-wget -c "${RUTA}Sega%20-%20Saturn/hisaturn.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/mpr-17933.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/mpr-18100.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/mpr-18811-mx.ic1" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/mpr-19367-mx.ic1" -P /storage/system/
+echo "sk2chip.bin (Sonic & Knuckles UPMEM ROM)"
+wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/sk2chip.bin" -P /storage/system/
+echo "areplay.bin (Action Replay ROM)"
+wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/areplay.bin" -P /storage/system/
+echo "ggenie.bin (Game Genie ROM)"
+wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/ggenie.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Mega%20Drive%20-%20Genesis/rom.db" -P /storage/system/
+echo
+echo "========================================================================"
+echo "Sega - MS/GG/MD/CD (Genesis Plus GX)"
+echo "========================================================================"
+echo
+echo "bios_MD.bin (Mega Drive startup ROM)"
+echo "bios_CD_E.bin (MegaCD EU BIOS)"
+echo "bios_CD_U.bin (SegaCD US BIOS)"
+echo "bios_CD_J.bin (MegaCD JP BIOS)"
+echo "bios_E.sms (MasterSystem EU BIOS)"
+echo "bios_U.sms (MasterSystem US BIOS)"
+echo "bios_J.sms (MasterSystem JP BIOS)"
+echo "bios.gg (GameGear BIOS)"
+echo "sk.bin (Sonic & Knuckles ROM)"
+echo "sk2chip.bin (Sonic & Knuckles UPMEM ROM)"
+echo "areplay.bin (Action Replay ROM)"
+echo "ggenie.bin (Game Genie ROM)"
+echo
+echo "========================================================================"
+echo "Sega - MS/GG/MD/CD/32X (PicoDrive)"
+echo "========================================================================"
+echo
+echo "bios_CD_E.bin (MegaCD EU BIOS)"
+echo "bios_CD_U.bin (SegaCD US BIOS)"
+echo "bios_CD_J.bin (MegaCD JP BIOS)"
+echo
+echo "========================================================================"
+echo "Sega - MS/GG/SG-1000 (Gearsystem)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Sega - Saturn (Yabause)"
+echo "========================================================================"
+echo
+echo "saturn_bios.bin (Saturn BIOS)"
 wget -c "${RUTA}Sega%20-%20Saturn/saturn_bios.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/sega1003.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/sega_100a.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/sega_100.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/sega_101.bin" -P /storage/system/
-wget -c "${RUTA}Sega%20-%20Saturn/vsaturn.bin" -P /storage/system/
-
-echo "Sharp-X1"
-wget -c "${RUTA}Sharp%20-%20X1/iplrom.x1" -P /storage/system/
-wget -c "${RUTA}Sharp%20-%20X1/iplrom.x1t" -P /storage/system/
-
-echo "Sharp-X68000"
-wget -c "${RUTA}Sharp%20-%20X68000/cgrom.dat" -P /storage/system/
-wget -c "${RUTA}Sharp%20-%20X68000/iplrom30.dat" -P /storage/system/
-wget -c "${RUTA}Sharp%20-%20X68000/iplromco.dat" -P /storage/system/
-wget -c "${RUTA}Sharp%20-%20X68000/iplrom.dat" -P /storage/system/
-wget -c "${RUTA}Sharp%20-%20X68000/iplromxv.dat" -P /storage/system/
-
-echo "Sinclair-ZX Spectrum"
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128p-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128p-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128-spanish-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128-spanish-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/256s-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/256s-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/256s-2.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/256s-3.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/48.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/disciple.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/disk_plus3.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/gluck.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/if1-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/if1-2.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus2-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus2-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3-2.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3-3.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3e-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3e-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3e-2.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3e-3.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plusd.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/se-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/se-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/speccyboot-1.4.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_128.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_16.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_2048.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_2068.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_48.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_pentagon.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_plus2a.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_plus2.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_plus3e.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_plus3.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_scorpion.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_se.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_ts2068.szx" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tc2048.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tc2068-0.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tc2068-1.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/trdos.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/zx128.rom" -P /storage/system/
-wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/zx48.rom" -P /storage/system/
-
-echo "SNK-NeoGeo CD"
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/000-lo.lo" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/front-sp1.bin" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd.bin" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_f.rom" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_sf.rom" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_st.rom" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_sz.rom" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_t.rom" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_z.rom" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/top-sp1.bin" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/uni-bioscd.rom" -P /storage/system/
-
-echo "Sony-PlayStation"
-wget -c "${RUTA}Sony%20-%20PlayStation/scph1000.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph1001.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph1002.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph100.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph101.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph102A.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph102B.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph102C.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph3000.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph3500.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph5000.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/hisaturn.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/mpr-17933.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/mpr-18100.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/mpr-18811-mx.ic1" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/mpr-19367-mx.ic1" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/sega1003.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/sega_100a.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/sega_100.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/sega_101.bin" -P /storage/system/
+#wget -c "${RUTA}Sega%20-%20Saturn/vsaturn.bin" -P /storage/system/
+echo
+echo "========================================================================"
+echo "Sharp - X68000 (PX68k)"
+echo "========================================================================"
+echo
+echo "iplrom.dat (X68000 BIOS)"
+wget -c "${RUTA}Sharp%20-%20X68000/iplrom.dat" -P /storage/system/keropi/
+echo "cgrom.dat (X68000 BIOS 2)"
+wget -c "${RUTA}Sharp%20-%20X68000/cgrom.dat" -P /storage/system/keropi/
+echo "iplrom30.dat (X68000 BIOS 3)"
+wget -c "${RUTA}Sharp%20-%20X68000/iplrom30.dat" -P /storage/system/keropi/
+#wget -c "${RUTA}Sharp%20-%20X68000/iplromco.dat" -P /storage/system/keropi/
+#wget -c "${RUTA}Sharp%20-%20X68000/iplromxv.dat" -P /storage/system/keropi/
+echo
+echo "========================================================================"
+echo "Sharp X1 (X Milennium)"
+echo "========================================================================"
+echo
+echo "xmil/IPLROM.X1 (Sharp X1 IPL ROM)"
+wget -c "${RUTA}Sharp%20-%20X1/iplrom.x1" -P /storage/system/xmil/
+echo "xmil/IPLROM.X1T (Sharp X1 8x8 Font ROM)"
+wget -c "${RUTA}Sharp%20-%20X1/iplrom.x1t" -P /storage/system/xmil/
+echo
+echo "========================================================================"
+echo "Sinclair - ZX 81 (EightyOne)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Sinclair - ZX Spectrum (Fuse)"
+echo "========================================================================"
+echo
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128-0.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128-1.rom" -P /storage/system/
+echo "128p-0.rom (Pentagon machines)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128p-0.rom" -P /storage/system/fuse/
+echo "128p-1.rom (Pentagon machines)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128p-1.rom" -P /storage/system/fuse/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128-spanish-0.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/128-spanish-1.rom" -P /storage/system/
+echo "trdos.rom (Pentagon machines)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/trdos.rom" -P /storage/system/fuse/
+echo "gluck.rom (Pentagon 512K / 1024)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/gluck.rom" -P /storage/system/fuse/
+echo "256s-0.rom (Scorpion 256K)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/256s-0.rom" -P /storage/system/fuse/
+echo "256s-1.rom (Scorpion 256K)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/256s-1.rom" -P /storage/system/fuse/
+echo "256s-2.rom (Scorpion 256K)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/256s-2.rom" -P /storage/system/fuse/
+echo "256s-3.rom (Scorpion 256K)"
+wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/256s-3.rom" -P /storage/system/fuse/
+echo
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/48.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/disciple.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/disk_plus3.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/if1-1.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/if1-2.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus2-0.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus2-1.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3-0.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3-1.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3-2.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3-3.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3e-0.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3e-1.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3e-2.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plus3e-3.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/plusd.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/se-0.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/se-1.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/speccyboot-1.4.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_128.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_16.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_2048.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_2068.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_48.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_pentagon.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_plus2a.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_plus2.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_plus3e.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_plus3.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_scorpion.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_se.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tape_ts2068.szx" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tc2048.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tc2068-0.rom" -P /storage/system/
+#wget -c "${RUTA}Sinclair%20-%20ZX%20Spectrum/tc2068-1.rom" -P /storage/system/
+echo
+echo "========================================================================"
+echo "SNK - Neo Geo AES/MVS (Geolith)"
+echo "========================================================================"
+echo
+echo "aes.zip (Neo Geo AES System ROM)"
+wget -c "${RUTA}Geolith/aes.zip" -P /storage/system/
+echo "neogeo.zip (Neo Geo MVS System ROM)"
+wget -c "${RUTA}Geolith/neogeo.zip" -P /storage/system/
+echo
+echo "========================================================================"
+echo "SNK - Neo Geo CD(NeoCD)"
+echo "========================================================================"
+echo
+echo "neocd/neocd_f.rom (Front Loader BIOS)"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_f.rom" -P /storage/system/neocd/
+echo "neocd/neocd_sf.rom (Front Loader BIOS (SMKDAN))"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_sf.rom" -P /storage/system/neocd/
+echo "neocd/front-sp1.bin (Front Loader BIOS (MAME))"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/front-sp1.bin" -P /storage/system/neocd/
+echo "neocd/neocd_t.rom (Top Loader BIOS))"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_t.rom" -P /storage/system/neocd/
+echo "neocd/neocd_st.rom (Top Loader BIOS (SMKDAN))"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_st.rom" -P /storage/system/neocd/
+echo "neocd/top-sp1.bin (Top Loader BIOS (MAME))"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/top-sp1.bin" -P /storage/system/neocd/
+echo "neocd/neocd_z.rom (CDZ BIOS)"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_z.rom" -P /storage/system/neocd/
+echo "neocd/neocd_sz.rom (CDZ BIOS (SMKDAN))"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd_sz.rom" -P /storage/system/neocd/
+echo "neocd/neocd.bin (CDZ BIOS (MAME))"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd.bin" -P /storage/system/neocd/
+echo "neocd/ng-lo.rom (Y-ZOOM ROM)"
+echo "neocd/000-lo.lo (Y-ZOOM ROM (MAME))"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/000-lo.lo" -P /storage/system/neocd/
+echo "neocd/uni-bioscd.rom (Universe BIOS 3.2)"
+wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/uni-bioscd.rom" -P /storage/system/neocd/
+echo
+echo "========================================================================"
+echo "SNK - Neo Geo Pocket / Color (Beetle NeoPop)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "SNK - Neo Geo Pocket / Color (RACE)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Sony - PlayStation (Beetle PSX HW)"
+echo "========================================================================"
+echo
+echo "scph5500.bin (PS1 JP BIOS)"
 wget -c "${RUTA}Sony%20-%20PlayStation/scph5500.bin" -P /storage/system/
+echo "scph5501.bin (PS1 US BIOS)"
 wget -c "${RUTA}Sony%20-%20PlayStation/scph5501.bin" -P /storage/system/
+echo "scph5502.bin (PS1 EU BIOS)"
 wget -c "${RUTA}Sony%20-%20PlayStation/scph5502.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph5552.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph7001.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph7002.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph7003.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph7502.bin" -P /storage/system/
-wget -c "${RUTA}Sony%20-%20PlayStation/scph9002(7502).bin" -P /storage/system/
-
-echo "Sony-PlayStation 2 /pcsx2/bios"
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0100j-20000117.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0100jd-20000117.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0101j-20000217.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0101jd-20000217.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0101xd-20000224.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0110a-20000727.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0110ad-20000727.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120a-20000902.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120e-20000902.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120ed-20000902-20030110.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120ed-20000902.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120j-20001027-185015.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120j-20001027-191435.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150a-20001228.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150ad-20001228-20030520.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150e-20001228.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150ed-20001228-20030520.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150j-20010118.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150jd-20010118.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160a-20010427.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160a-20010704.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160a-20011004.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160a-20020207.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160e-20010704.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160e-20011004.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160e-20020319.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160e-20020426.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160h-20010730.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160h-20020426.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160j-20010427.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160j-20020426.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170a-20030325.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170ad-20030325.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170e-20030227.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170ed-20030227.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170j-20030206.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0180cd-20030224.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0180j-20031028.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190a-20030623.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190a-20040329.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190c-20030623.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190e-20030623.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190e-20030822.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190h-20030623.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190j-20030623.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190j-20030822.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190r-20030623.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200a-20040614.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200e-20040614.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200ed-20040614.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200h-20040614.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200j-20040614.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0210j-20040917.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220a-20050620.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220a-20060210.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220a-20060905.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220ad-20050620.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220ad-20060905.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220e-20050620.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220e-20060210.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220e-20060905.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220h-20050620.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220h-20060210.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220h-20060905.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220j-20050620.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220j-20060210.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220j-20060905.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0230a-20080220.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0230e-20080220.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0230h-20080220.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0230j-20080220.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0250e-20100415.bin" -P /storage/system/pcsx2/bios/
-wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0250j-20100415.bin" -P /storage/system/pcsx2/bios/
-
-echo "Sony-PlayStation Portable"
-wget -c "${RUTA}Sony%20-%20PlayStation%20Portable/ppge_atlas.zim" -P /storage/system/
-
-echo "Videoton-TV Computer"
-wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_ext.rom" -P /storage/system/
-wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_sys.rom" -P /storage/system/
-wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc_dos12d.rom" -P /storage/system/
-wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvcfileio.rom" -P /storage/system/
-
+echo
+echo "psxonpsp660.bin (PSP PS1 BIOS)"
+echo "ps1_rom.bin (PS3 PS1 BIOS)"
+echo 
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph1000.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph1001.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph1002.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph100.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph101.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph102A.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph102B.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph102C.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph3000.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph3500.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph5000.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph5552.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph7001.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph7002.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph7003.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph7502.bin" -P /storage/system/
+#wget -c "${RUTA}Sony%20-%20PlayStation/scph9002(7502).bin" -P /storage/system/
+echo "========================================================================"
+echo "Sony - PlayStation (PCSX ReARMed)"
+echo "========================================================================"
+echo
+echo "scph5500.bin (PS1 JP BIOS)"
+echo "scph5501.bin (PS1 US BIOS)"
+echo "scph5502.bin (PS1 EU BIOS)"
+echo
+echo "========================================================================"
+echo "Sony - PlayStation (SwanStation)"
+echo "========================================================================"
+echo
+echo "psxonpsp660.bin (PSP PS1 BIOS)"
+echo "scph5500.bin (PS1 JP BIOS)"
+echo "scph5501.bin (PS1 US BIOS)"
+echo "scph5502.bin (PS1 EU BIOS)"
+echo "ps1_rom.bin (PS3 PS1 BIOS)"
+echo
+echo "========================================================================"
+echo "Sony - PlayStation 2 (Play!)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Sony - PlayStation Portable (PPSSPP)"
+echo "========================================================================"
+echo
+echo "ppge_atlas.zim (PPSSPP Data ROM) by default on the OS"
+#wget -c "${RUTA}Sony%20-%20PlayStation%20Portable/ppge_atlas.zim" -P /storage/system/
+echo
+echo "========================================================================"
+echo "Supper Bros War"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Texas Instruments TI-83 (Numero)"
+echo "========================================================================"
+echo
+echo "ti83se.rom (TI-83 Silver Edition)"
+echo "ti83plus.rom (TI-83 Plus)"
+echo "ti83.rom (TI-83)"
+echo
+echo "========================================================================"
+echo "The 3DO Company -3DO (Opera)"
+echo "========================================================================"
+echo
+echo "panafz1.bin (Panasonic FZ-1 BIOS"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1.bin" -P /storage/system/
+echo "panafz10.bin (Panasonic FZ-10 BIOS)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10.bin" -P /storage/system/
+echo "panafz10-norsa.bin (Panasonic FZ-10 BIOS [Encryption Check Disabled])"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10-norsa.bin" -P /storage/system/
+echo "panafz10e-anvil.bin (Panasonic FZ-10E ANVIL BIOS)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10e-anvil.bin" -P /storage/system/
+echo "panafz10e-anvil-norsa.bin (Panasonic FZ-10E ANVIL BIOS [Encryption Check Disabled])"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10e-anvil-norsa.bin" -P /storage/system/
+echo "goldstar.bin (Goldstar GDO-101M BIOS)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/goldstar.bin" -P /storage/system/
+echo "sanyotry.bin (Sanyo Try IMP-21J BIOS)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/sanyotry.bin" -P /storage/system/
+echo "3do_arcade_saot.bin (Shootout At Old Tucson BIOS)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/3do_arcade_saot.bin" -P /storage/system/
+echo "panafz1-kanji.bin (Panasonic FZ-1 Kanji Font ROM)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1-kanji.bin" -P /storage/system/
+echo "panafz10ja-anvil-kanji.bin (Panasonic FZ-10JA Kanji Font ROM)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz10ja-anvil-kanji.bin" -P /storage/system/
+echo "panafz1j.bin (Panasonic FZ-1J BIOS)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1j.bin" -P /storage/system/
+echo "panafz1j-norsa.bin (Panasonic FZ-1J BIOS [Encryption Check Disabled])"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1j-norsa.bin" -P /storage/system/
+echo "panafz1j-kanji.bin (Panasonic FZ-1J Kanji Font ROM)"
+wget -c "${RUTA}3DO%20Company%2C%20The%20-%203DO/panafz1j-kanji.bin" -P /storage/system/
+echo
+echo "========================================================================"
+echo "The Powder Toy"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Thomson - MO/TO (Theodore)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "TIC-80"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Tomb Raider (OpenLara)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Uzebox (Uzem)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Vircon32"
+echo "========================================================================"
+echo
+echo "Vircon32Bios.v32 (alternative BIOS file)"
+echo
+echo "========================================================================"
+echo "WASM-4"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Watara - Supervision (Potator)"
+echo "========================================================================"
+echo
+echo "========================================================================"
+echo "Wolfenstein 3D (ECWolf)"
+echo "========================================================================"
+echo
+echo "ecwolf.pk3 (ECWolf System File)"
+wget -c "${RUTA}Wolfenstein%203D/ecwolf.pk3" -P /storage/system/
+echo
+#echo "Coleco-ColecoVision"
+#wget -c "${RUTA}Coleco%20-%20ColecoVision/colecovision.rom" -P /storage/system/
+#echo "J2ME"
+#wget -c "${RUTA}J2ME/freej2me.jar" -P /storage/system/
+#wget -c "${RUTA}J2ME/freej2me-lr.jar" -P /storage/system/
+#wget -c "${RUTA}J2ME/freej2me-sdl.jar" -P /storage/system/
+#echo "MacII"
+#wget -c "${RUTA}MacII/MacII.ROM" -P /storage/system/
+#echo "Nintendo-Nintendo Entertainment System"
+#wget -c "${RUTA}Nintendo%20-%20Nintendo%20Entertainment%20System/NstDatabase.xml" -P /storage/system/
+#echo "Sony-PlayStation 2 /pcsx2/bios"
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0100j-20000117.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0100jd-20000117.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0101j-20000217.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0101jd-20000217.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0101xd-20000224.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0110a-20000727.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0110ad-20000727.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120a-20000902.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120e-20000902.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120ed-20000902-20030110.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120ed-20000902.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120j-20001027-185015.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0120j-20001027-191435.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150a-20001228.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150ad-20001228-20030520.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150e-20001228.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150ed-20001228-20030520.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150j-20010118.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0150jd-20010118.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160a-20010427.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160a-20010704.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160a-20011004.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160a-20020207.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160e-20010704.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160e-20011004.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160e-20020319.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160e-20020426.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160h-20010730.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160h-20020426.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160j-20010427.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0160j-20020426.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170a-20030325.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170ad-20030325.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170e-20030227.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170ed-20030227.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0170j-20030206.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0180cd-20030224.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0180j-20031028.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190a-20030623.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190a-20040329.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190c-20030623.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190e-20030623.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190e-20030822.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190h-20030623.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190j-20030623.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190j-20030822.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0190r-20030623.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200a-20040614.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200e-20040614.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200ed-20040614.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200h-20040614.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0200j-20040614.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0210j-20040917.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220a-20050620.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220a-20060210.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220a-20060905.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220ad-20050620.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220ad-20060905.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220e-20050620.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220e-20060210.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220e-20060905.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220h-20050620.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220h-20060210.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220h-20060905.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220j-20050620.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220j-20060210.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0220j-20060905.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0230a-20080220.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0230e-20080220.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0230h-20080220.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0230j-20080220.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0250e-20100415.bin" -P /storage/system/pcsx2/bios/
+#wget -c "${RUTA}Sony%20-%20PlayStation%202/pcsx2/bios/ps2-0250j-20100415.bin" -P /storage/system/pcsx2/bios/
+echo
 echo "That's all!"
+echo
