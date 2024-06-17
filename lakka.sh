@@ -4,7 +4,7 @@
 # Por: Raspberry Pi Buenos Aires ("https://sites.google.com/view/raspberrypibuenosaires/)
 # License: http://creativecommons.org/licenses/by-sa/4.0/
 ###########################################################################
-RUTA="https://github.com/PIBSAS/Lakka6/tree/main/System/"
+RUTA="https://github.com/PIBSAS/Lakka6/raw/main/System/"
 cd
 mkdir /storage/system/dc/
 mkdir /storage/system/pcsx2/
@@ -458,6 +458,7 @@ echo
 echo "(Neo Geo BIOS)"
 wget -c "${RUTA}Arcade/neogeo.zip" -P /storage/system/fbneo/
 echo "fbneo/neocdz.zip (Neo Geo CDZ System BIOS)"
+wget -c "${RUTA}Arcade/neocdz.zip" -P /storage/system/fbneo/
 echo "fbneo/decocass.zip (DECO Cassette System BIOS)"
 wget -c "${RUTA}Arcade/decocass.zip" -P /storage/system/fbneo/
 echo "fbneo/isgsm.zip (ISG Selection Master Type 2006 System BIOS)"
@@ -477,16 +478,27 @@ wget -c "${RUTA}Arcade/cchip.zip" -P /storage/system/fbneo/
 echo "fbneo/bubsys.zip (Bubble System BIOS)"
 wget -c "${RUTA}Arcade/bubsys.zip" -P /storage/system/fbneo/
 echo "fbneo/namcoc69.zip (Namco C69 BIOS)"
+wget -c "${RUTA}Arcade/namcoc69.zip" -P /storage/system/fbneo/
 echo "fbneo/namcoc70.zip (Namco C70 BIOS)"
+wget -c "${RUTA}Arcade/namcoc70.zip" -P /storage/system/fbneo/
 echo "fbneo/namcoc75.zip (Namco C75 BIOS)"
+wget -c "${RUTA}Arcade/namcoc75.zip" -P /storage/system/fbneo/
 echo "fbneo/coleco.zip (ColecoVision System BIOS)"
+wget -c "${RUTA}Arcade/coleco.zip" -P /storage/system/fbneo/
 echo "fbneo/fdsbios.zip (FDS System BIOS)"
+wget -c "${RUTA}Arcade/fdsbios.zip" -P /storage/system/fbneo/
 echo "fbneo/msx.zip (MSX1 System BIOS)"
+wget -c "${RUTA}Arcade/msx.zip" -P /storage/system/fbneo/
 echo "fbneo/ngp.zip (NeoGeo Pocket BIOS)"
+wget -c "${RUTA}Arcade/ngp.zip" -P /storage/system/fbneo/
 echo "fbneo/spectrum.zip (ZX Spectrum BIOS)"
+wget -c "${RUTA}Arcade/spectrum.zip" -P /storage/system/fbneo/
 echo "fbneo/spec128.zip (ZX Spectrum 128 BIOS)"
+wget -c "${RUTA}Arcade/spec128.zip" -P /storage/system/fbneo/
 echo "fbneo/spec1282a.zip (ZX Spectrum 128 +2a BIOS)"
+wget -c "${RUTA}Arcade/spec1282a.zip" -P /storage/system/fbneo/
 echo "fbneo/channelf.zip (Fairchild Channel F BIOS)"
+wget -c "${RUTA}Arcade/channelf.zip" -P /storage/system/fbneo/
 echo
 echo "========================================================================"
 echo "Arcade (MAME 2003-Plus)"
