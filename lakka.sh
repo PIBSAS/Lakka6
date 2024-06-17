@@ -4,7 +4,7 @@
 # Por: Raspberry Pi Buenos Aires ("https://sites.google.com/view/raspberrypibuenosaires/)
 # License: http://creativecommons.org/licenses/by-sa/4.0/
 ###########################################################################
-RUTA_ARCADE=https://github.com/PIBSAS/Lakka6/raw/main/System/Arcade/
+RUTA_ARCADE="https://github.com/PIBSAS/Lakka6/raw/main/System/Arcade/"
 RUTA="https://raw.githubusercontent.com/PIBSAS/Lakka6/main/System/"
 cd
 mkdir /storage/system/dc/
@@ -13,6 +13,7 @@ mkdir /storage/system/pcsx2/bios/
 mkdir /storage/system/ep128emu/
 mkdir /storage/system/ep128emu/roms/
 mkdir /storage/system/same_cdi/
+mkdir /storage/system/same_cdi/bios/
 mkdir /storage/system/fbneo/
 mkdir /storage/system/np2kai/
 mkdir /storage/system/keropi/
@@ -1341,8 +1342,11 @@ echo "Phillips - CDi (SAME CDi)"
 echo "========================================================================"
 echo
 echo "same_cdi/bios/cdimono1.zip"
+wget -c "${RUTA}same_cdi/bios/cdimono1.zip" -P /storage/system/same_cdi/bios/
 echo "same_cdi/bios/cdimono2.zip"
+wget -c "${RUTA}same_cdi/bios/cdimono2.zip" -P /storage/system/same_cdi/bios/
 echo "same_cdi/bios/cdibios.zip"
+wget -c "${RUTA}same_cdi/bios/cdibios.zip" -P /storage/system/same_cdi/bios/
 echo
 echo "========================================================================"
 echo "PICO-8 (Fake-08)"
