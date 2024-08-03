@@ -6,6 +6,7 @@
 ###########################################################################
 RUTA=https://github.com/PIBSAS/LakkaBios/raw/main/System/
 RUTA_ARCH="https://archive.org/download/bios_batocera/BatoceraV39Bios/bios/"
+RUTA_B="https://archive.org/download/bios_batocera/"
 cd
 mkdir /storage/system/dc/
 mkdir /storage/system/fbneo/
@@ -744,7 +745,7 @@ wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/bios9.bin" -P /storage/system/
 wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/dsi_firmware.bin" -P /storage/system/
 wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/dsi_bios7.bin" -P /storage/system/
 wget -c "${RUTA}Nintendo%20-%20Nintendo%20DS/dsi_bios9.bin" -P /storage/system/
-wget -c "${RUTA_ARCH}dsi_nand.bin" -P /storage/system/
+wget -c "${RUTA_B}dsi_nand.bin" -P /storage/system/
 wget -c "${RUTA_ARCH}dsi_sd_card.bin" -P /storage/system/
 echo
 
