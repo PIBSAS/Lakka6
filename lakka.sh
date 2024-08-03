@@ -7,6 +7,7 @@
 RUTA_ARCADE="https://github.com/PIBSAS/Lakka6/raw/main/System/Arcade/"
 RUTA="https://raw.githubusercontent.com/PIBSAS/Lakka6/main/System/"
 RUTA_B="https://archive.org/download/bios_batocera/"
+RUTA_C="https://raw.githubusercontent.com/PIBSAS/Lakka6/main/System/"
 cd
 mkdir /storage/system/dc/
 mkdir /storage/system/pcsx2/
@@ -379,10 +380,10 @@ rm "/storage/system/pcsx2/bios/ps2-0230j-20080220.bin"
 rm "/storage/system/pcsx2/bios/ps2-0250e-20100415.bin"
 rm "/storage/system/pcsx2/bios/ps2-0250j-20100415.bin"
 rm "/storage/system/ppge_atlas.zim"
-#rm "/storage/system/tvc22_ext.rom"
-#rm "/storage/system/tvc22_sys.rom"
-#rm "/storage/system/tvc_dos12d.rom"
-#rm "/storage/system/tvcfileio.rom"
+rm "/storage/system/tvc22_ext.rom"
+rm "/storage/system/tvc22_sys.rom"
+rm "/storage/system/tvc_dos12d.rom"
+rm "/storage/system/tvcfileio.rom"
 rm "/storage/system/ecwolf.pk3"
 rm "/storage/system/aes.zip"
 rm "/storage/system/neogeo.zip"
@@ -467,8 +468,8 @@ echo "========================================================================"
 echo
 echo "(Neo Geo BIOS)"
 wget -c "${RUTA_ARCADE}neogeo.zip" -P /storage/system/fbneo/
-wget -c "${RUTA}neogeo.zip" -P /storage/system/
-wget -c "${RUTA}aes.zip" -P /storage/system/
+wget -c "${RUTA_C}neogeo.zip" -P /storage/system/
+wget -c "${RUTA_C}aes.zip" -P /storage/system/
 echo "fbneo/neocdz.zip (Neo Geo CDZ System BIOS)"
 wget -c "${RUTA_ARCADE}neocdz.zip" -P /storage/system/fbneo/
 echo "fbneo/decocass.zip (DECO Cassette System BIOS)"
@@ -1775,14 +1776,14 @@ echo "========================================================================"
 echo "Texas Instruments Ti99"
 echo "========================================================================"
 echo
-wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83.rom" -P /storage/system/
-wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83plus.rom" -P /storage/system/
-wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83se.rom" -P /storage/system/
+wget -c "${RUTA_C}Texas%20Instruments%20TI-83/ti83.rom" -P /storage/system/
+wget -c "${RUTA_C}Texas%20Instruments%20TI-83/ti83plus.rom" -P /storage/system/
+wget -c "${RUTA_C}Texas%20Instruments%20TI-83/ti83se.rom" -P /storage/system/
 echo
 echo "========================================================================"
 echo "Virtual Console Vircon 32"
 echo "========================================================================"
-wget -c "${RUTA}Vircon32Bios.v32" -P /storage/system/
+wget -c "${RUTA_C}Vircon32Bios.v32" -P /storage/system/
 echo
 #echo "Coleco-ColecoVision"
 #wget -c "${RUTA}Coleco%20-%20ColecoVision/colecovision.rom" -P /storage/system/
