@@ -1,4 +1,4 @@
-<h1 align="center">Lakka 6 Bios</h1>
+<h1 align="center">Lakka 5 Bios</h1>
 
 <p align="center">
   <img alt="Lakka.png" src="https://github.com/PIBSAS/LakkaBios/blob/main/Lakka.png?raw=true">
