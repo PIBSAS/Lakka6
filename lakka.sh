@@ -6,6 +6,7 @@
 ###########################################################################
 RUTA_ARCADE="https://github.com/PIBSAS/Lakka6/raw/main/System/Arcade/"
 RUTA="https://raw.githubusercontent.com/PIBSAS/Lakka6/main/System/"
+RUTA_B="https://archive.org/download/bios_batocera/"
 cd
 mkdir /storage/system/dc/
 mkdir /storage/system/pcsx2/
@@ -466,6 +467,8 @@ echo "========================================================================"
 echo
 echo "(Neo Geo BIOS)"
 wget -c "${RUTA_ARCADE}neogeo.zip" -P /storage/system/fbneo/
+wget -c "${RUTA}neogeo.zip" -P /storage/system/
+wget -c "${RUTA}aes.zip" -P /storage/system/
 echo "fbneo/neocdz.zip (Neo Geo CDZ System BIOS)"
 wget -c "${RUTA_ARCADE}neocdz.zip" -P /storage/system/fbneo/
 echo "fbneo/decocass.zip (DECO Cassette System BIOS)"
@@ -1766,6 +1769,20 @@ echo "========================================================================"
 echo
 echo "ecwolf.pk3 (ECWolf System File)"
 wget -c "${RUTA}Wolfenstein%203D/ecwolf.pk3" -P /storage/system/
+echo
+echo
+echo "========================================================================"
+echo "Texas Instruments Ti99"
+echo "========================================================================"
+echo
+wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83.rom" -P /storage/system/
+wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83plus.rom" -P /storage/system/
+wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83se.rom" -P /storage/system/
+echo
+echo "========================================================================"
+echo "Virtual Console Vircon 32"
+echo "========================================================================"
+wget -c "${RUTA}Vircon32Bios.v32" -P /storage/system/
 echo
 #echo "Coleco-ColecoVision"
 #wget -c "${RUTA}Coleco%20-%20ColecoVision/colecovision.rom" -P /storage/system/
