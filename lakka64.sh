@@ -7,6 +7,7 @@
 RUTA=https://github.com/PIBSAS/LakkaBios/raw/main/System/
 RUTA_ARCH="https://archive.org/download/bios_batocera/BatoceraV39Bios/bios/"
 RUTA_B="https://archive.org/download/bios_batocera/"
+RUTA_C="https://github.com/PIBSAS/Lakka6/raw/main/System/"
 cd
 mkdir /storage/system/dc/
 mkdir /storage/system/fbneo/
@@ -596,18 +597,18 @@ echo
 echo
 echo "Commodore-Amiga(PUAE 2021 - PUAE - UAE4ARM)"
 echo
-wget -c "${RUTA}Commodore%20-%20Amiga/kick33180.A500" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick34005.A500" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick37175.A500" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick37350.A600" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick40063.A600" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick39106.A1200" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick40068.A1200" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick39106.A4000" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick40068.A4000" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick34005.CDTV" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick40060.CD32" -P /storage/system/
-wget -c "${RUTA}Commodore%20-%20Amiga/kick40060.CD32.ext" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick33180.A500" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick34005.A500" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick37175.A500" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick37350.A600" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick40063.A600" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick39106.A1200" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick40068.A1200" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick39106.A4000" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick40068.A4000" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick34005.CDTV" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick40060.CD32" -P /storage/system/
+wget -c "${RUTA_C}Commodore%20-%20Amiga/kick40060.CD32.ext" -P /storage/system/
 echo
 
 echo
@@ -998,8 +999,8 @@ wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd.bin" -P /storage/system/neocd/
 wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/ng-lo.rom" -P /storage/system/neocd/
 wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/000-lo.lo" -P /storage/system/neocd/
 wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/uni-bioscd.rom" -P /storage/system/neocd/
-wget -c "${RUTA}SNK%20-%20Neo%20Geo%20AES-MVS%20(Geolith)/neogeo.zip" -P /storage/system/
-wget -c "${RUTA}SNK%20-%20Neo%20Geo%20AES-MVS%20(Geolith)/aes.zip" -P /storage/system/
+wget -c "${RUTA_C}SNK%20-%20Neo%20Geo%20AES-MVS%20(Geolith)/neogeo.zip" -P /storage/system/
+wget -c "${RUTA_C}SNK%20-%20Neo%20Geo%20AES-MVS%20(Geolith)/aes.zip" -P /storage/system/
 echo
 
 echo
@@ -1136,17 +1137,13 @@ echo
 wget -c "${RUTA}Wolfenstein%203D/ecwolf.pk3" -P /storage/system/
 echo
 
-echo
-echo "That's all!"
-echo "Now reboot"
-
 #Nada más comentar
 #echo
 echo "Videoton-TV Computer"
-wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_ext.rom" -P /storage/system/
-wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_sys.rom" -P /storage/system/
-wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc_dos12d.rom" -P /storage/system/
-wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvcfileio.rom" -P /storage/system/
+wget -c "${RUTA_C}Videoton%20-%20TV%20Computer/tvc22_ext.rom" -P /storage/system/
+wget -c "${RUTA_C}Videoton%20-%20TV%20Computer/tvc22_sys.rom" -P /storage/system/
+wget -c "${RUTA_C}Videoton%20-%20TV%20Computer/tvc_dos12d.rom" -P /storage/system/
+wget -c "${RUTA_C}Videoton%20-%20TV%20Computer/tvcfileio.rom" -P /storage/system/
 
 #echo
 echo "Enterprise-64-128"
@@ -1199,19 +1196,23 @@ echo
 #echo
 echo "Amstrad-CPC"
 echo
-wget -c "${RUTA}Amstrad%20-%20CPC/cpc464.rom" -P /storage/system/
-wget -c "${RUTA}Amstrad%20-%20CPC/cpc6128.rom" -P /storage/system/
-wget -c "${RUTA}Amstrad%20-%20CPC/cpc664.rom" -P /storage/system/
-wget -c "${RUTA}Amstrad%20-%20CPC/cpc_amsdos.rom" -P /storage/system/
+wget -c "${RUTA_C}Amstrad%20-%20CPC/cpc464.rom" -P /storage/system/
+wget -c "${RUTA_C}Amstrad%20-%20CPC/cpc6128.rom" -P /storage/system/
+wget -c "${RUTA_C}Amstrad%20-%20CPC/cpc664.rom" -P /storage/system/
+wget -c "${RUTA_C}Amstrad%20-%20CPC/cpc_amsdos.rom" -P /storage/system/
 echo
 
 echo "Texas Instruments"
-wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83.rom" -P /storage/system/
-wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83plus.rom" -P /storage/system/
-wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83se.rom" -P /storage/system/
+wget -c "${RUTA_C}Texas%20Instruments%20TI-83/ti83.rom" -P /storage/system/
+wget -c "${RUTA_C}Texas%20Instruments%20TI-83/ti83plus.rom" -P /storage/system/
+wget -c "${RUTA_C}Texas%20Instruments%20TI-83/ti83se.rom" -P /storage/system/
 echo
 
 echo
 echo "Virtual Console Vircon 32"
-wget -c "${RUTA}Vircon32Bios.v32" -P /storage/system/
+wget -c "${RUTA_C}Vircon32Bios.v32" -P /storage/system/
 echo
+
+echo
+echo "That's all!"
+echo "Now reboot"
