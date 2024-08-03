@@ -7,7 +7,7 @@
 RUTA=https://github.com/PIBSAS/LakkaBios/raw/main/System/
 RUTA_ARCH="https://archive.org/download/bios_batocera/BatoceraV39Bios/bios/"
 RUTA_B="https://archive.org/download/bios_batocera/"
-RUTA_C="https://github.com/PIBSAS/Lakka6/raw/main/System/"
+RUTA_C="https://raw.githubusercontent.com/PIBSAS/Lakka6/main/System/"
 cd
 mkdir /storage/system/dc/
 mkdir /storage/system/fbneo/
