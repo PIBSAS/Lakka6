@@ -41,10 +41,10 @@ rm "/storage/system/panafz1j-norsa.bin"
 rm "/storage/system/panafz1j.bin"
 rm "/storage/system/sanyotry.bin"
 #Amstrad-CPC no more neccesary on PC only?
-#rm "/storage/system/cpc464.rom"
-#rm "/storage/system/cpc6128.rom"
-#rm "/storage/system/cpc664.rom"
-#rm "/storage/system/cpc_amsdos.rom"
+rm "/storage/system/cpc464.rom"
+rm "/storage/system/cpc6128.rom"
+rm "/storage/system/cpc664.rom"
+rm "/storage/system/cpc_amsdos.rom"
 #Arcade
 rm "/storage/system/fbneo/bubsys.zip"
 rm "/storage/system/fbneo/cchip.zip"
@@ -98,18 +98,18 @@ rm "/storage/system/kick40063.A600"
 rm "/storage/system/kick40068.A1200"
 rm "/storage/system/kick40068.A4000"
 #Enterprise-64-128 No more needed on PC64bits
-#rm "/storage/system/basic20.rom"
-#rm "/storage/system/basic21.rom"
-#rm "/storage/system/brd.rom"
-#rm "/storage/system/epd19hft.rom"
-#rm "/storage/system/epfileio.rom"
-#rm "/storage/system/exdos13.rom"
-#rm "/storage/system/exos20.rom"
-#rm "/storage/system/exos21.rom"
-#rm "/storage/system/exos24uk.rom"
-#rm "/storage/system/hun.rom"
-#rm "/storage/system/zt18hfnt.rom"
-#rm "/storage/system/zt19uk.rom"
+rm "/storage/system/basic20.rom"
+rm "/storage/system/basic21.rom"
+rm "/storage/system/brd.rom"
+rm "/storage/system/epd19hft.rom"
+rm "/storage/system/epfileio.rom"
+rm "/storage/system/exdos13.rom"
+rm "/storage/system/exos20.rom"
+rm "/storage/system/exos21.rom"
+rm "/storage/system/exos24uk.rom"
+rm "/storage/system/hun.rom"
+rm "/storage/system/zt18hfnt.rom"
+rm "/storage/system/zt19uk.rom"
 #Fairchild Channel F
 rm "/storage/system/sl31253.bin"
 rm "/storage/system/sl31254.bin"
@@ -268,6 +268,9 @@ rm "/storage/system/neocd/neocd_z.rom"
 rm "/storage/system/neocd/ng-lo.rom"
 rm "/storage/system/neocd/top-sp1.bin"
 rm "/storage/system/neocd/uni-bioscd.rom"
+# SNK-NeoGeo Geolith
+rm "/storage/system/neogeo.zip"
+rm "/storage/system/aes.zip"
 #ScummVM
 #rm "/storage/system/scummvm.zip"
 #Sega-Dreamcast-based Arcade 
@@ -488,10 +491,10 @@ rm "/storage/system/scph7003.bin"
 rm "/storage/system/scph7502.bin"
 rm "/storage/system/scph9002(7502).bin"
 #Videoton-TV Computer No more available
-#rm "/storage/system/tvc22_ext.rom"
-#rm "/storage/system/tvc22_sys.rom"
-#rm "/storage/system/tvc_dos12d.rom"
-#rm "/storage/system/tvcfileio.rom"
+rm "/storage/system/tvc22_ext.rom"
+rm "/storage/system/tvc22_sys.rom"
+rm "/storage/system/tvc_dos12d.rom"
+rm "/storage/system/tvcfileio.rom"
 #Wolfenstein 3D
 rm "/storage/system/ecwolf.pk3"
 #quasi88
@@ -674,7 +677,7 @@ echo
 echo
 
 #echo
-#echo "MSX/SVI/ColecoVision/SG-1000(blueMSX)"
+echo "MSX/SVI/ColecoVision/SG-1000(blueMSX)"
 #echo "System/Machines"
 #echo "System/Databases"
 #echo
@@ -994,6 +997,8 @@ wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/neocd.bin" -P /storage/system/neocd/
 wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/ng-lo.rom" -P /storage/system/neocd/
 wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/000-lo.lo" -P /storage/system/neocd/
 wget -c "${RUTA}SNK%20-%20NeoGeo%20CD/uni-bioscd.rom" -P /storage/system/neocd/
+wget -c "${RUTA}SNK%20-%20Neo%20Geo%20AES-MVS%20(Geolith)/neogeo.zip" -P /storage/system/
+wget -c "${RUTA}SNK%20-%20Neo%20Geo%20AES-MVS%20(Geolith)/aes.zip" -P /storage/system/
 echo
 
 echo
@@ -1136,27 +1141,27 @@ echo "Now reboot"
 
 #Nada más comentar
 #echo
-#echo "Videoton-TV Computer"
-#wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_ext.rom" -P /storage/system/
-#wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_sys.rom" -P /storage/system/
-#wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc_dos12d.rom" -P /storage/system/
-#wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvcfileio.rom" -P /storage/system/
+echo "Videoton-TV Computer"
+wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_ext.rom" -P /storage/system/
+wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc22_sys.rom" -P /storage/system/
+wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvc_dos12d.rom" -P /storage/system/
+wget -c "${RUTA}Videoton%20-%20TV%20Computer/tvcfileio.rom" -P /storage/system/
 
 #echo
-#echo "Enterprise-64-128"
-#wget -c "${RUTA}Enterprise%20-%2064-128/basic20.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/basic21.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/brd.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/epd19hft.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/epfileio.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/exdos13.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/exos20.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/exos21.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/exos24uk.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/hun.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/zt18hfnt.rom" -P /storage/system/
-#wget -c "${RUTA}Enterprise%20-%2064-128/zt19uk.rom" -P /storage/system/
-#echo
+echo "Enterprise-64-128"
+wget -c "${RUTA}Enterprise%20-%2064-128/basic20.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/basic21.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/brd.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/epd19hft.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/epfileio.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/exdos13.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/exos20.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/exos21.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/exos24uk.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/hun.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/zt18hfnt.rom" -P /storage/system/
+wget -c "${RUTA}Enterprise%20-%2064-128/zt19uk.rom" -P /storage/system/
+echo
 
 #echo
 #echo "J2ME"
@@ -1165,10 +1170,10 @@ echo "Now reboot"
 #wget -c "${RUTA}J2ME/freej2me-sdl.jar" -P /storage/system/
 #echo
 
-#echo
-#echo "MacII"
-#wget -c "${RUTA}MacII/MacII.ROM" -P /storage/system/
-#echo
+echo
+echo "MacII"
+wget -c "${RUTA}MacII/MacII.ROM" -P /storage/system/
+echo
 
 #echo "Nintendo-GameCube"
 #wget -c "${RUTA}Nintendo%20-%20GameCube/gc-dvd-20010608.bin" -P /storage/system/
@@ -1191,10 +1196,21 @@ echo "Now reboot"
 #wget -c "${RUTA}Nintendo%20-%20Satellaview/BS-X%20(En)%20(DRM-Free).bin" -P /storage/system/
 
 #echo
-#echo "Amstrad-CPC"
-#echo
-#wget -c "${RUTA}Amstrad%20-%20CPC/cpc464.rom" -P /storage/system/
-#wget -c "${RUTA}Amstrad%20-%20CPC/cpc6128.rom" -P /storage/system/
-#wget -c "${RUTA}Amstrad%20-%20CPC/cpc664.rom" -P /storage/system/
-#wget -c "${RUTA}Amstrad%20-%20CPC/cpc_amsdos.rom" -P /storage/system/
+echo "Amstrad-CPC"
+echo
+wget -c "${RUTA}Amstrad%20-%20CPC/cpc464.rom" -P /storage/system/
+wget -c "${RUTA}Amstrad%20-%20CPC/cpc6128.rom" -P /storage/system/
+wget -c "${RUTA}Amstrad%20-%20CPC/cpc664.rom" -P /storage/system/
+wget -c "${RUTA}Amstrad%20-%20CPC/cpc_amsdos.rom" -P /storage/system/
+echo
+
+echo "Texas Instruments"
+wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83.rom" -P /storage/system/
+wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83plus.rom" -P /storage/system/
+wget -c "${RUTA}Texas%20Instruments%20TI-83/ti83se.rom" -P /storage/system/
+echo
+
+echo
+echo "Virtual Console Vircon 32"
+wget -c "${RUTA}Vircon32Bios.v32" -P /storage/system/
 echo
